@@ -1,11 +1,11 @@
 html,
 body,
 main {
-	height: 100vh;
+	height: 100%!important;
 }
 
 main {
 	@media #{$large-and-up} {
-    	padding-left: 300px;
+    	// padding-left: 300px;
   	}
 }

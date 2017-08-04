@@ -1,0 +1,85 @@
+.what-we-do {
+	.row:after {
+		@media #{$large-and-up} {
+			content: "";
+			position: relative;
+			bottom: -99px;
+			display: block;
+			margin: 0 auto;
+			border-bottom: 1px dashed;
+			border-color: color("grey", "lighten-1");
+			width: 66.5%;	
+  		}
+	}
+	.col {
+		@media #{$medium-and-down} {
+    		float: none;
+  		}
+  		&:nth-of-type(2) .card:before {
+			@media #{$large-and-up} {
+				content: "";
+				@include abs-centered(x);
+				bottom: -220px;
+	  			display: inline-block;
+	  			border: 1px dashed;
+	  			border-radius: 50%;
+	  			border-color: color("grey", "darken-3");
+				width: 20px;
+				height: 20px;
+    		}
+  		}
+  		&:nth-of-type(2) .card:after {
+			@media #{$large-and-up} {
+				height: 200px;
+    		}
+  		}
+  		&:last-child .card:before {
+			@media #{$medium-and-down} {
+				content: "";
+				@include abs-centered(x);
+				bottom: -70px;
+	  			display: inline-block;
+	  			border: 1px dashed;
+	  			border-radius: 50%;
+	  			border-color: color("grey", "darken-3");
+				width: 20px;
+				height: 20px;
+    		}
+    		@media #{$large-and-up} {
+    			// styles for large screens and up
+  			}
+  		}
+	}
+	.card {
+		position: relative;
+		margin: 7px auto 50px;
+		max-width: 250px;
+		&:after {
+			content: "";
+			display: block;
+			border-left: 1px dashed;
+			border-color: color("grey", "lighten-1");
+			width: 2px;
+			@media #{$medium-and-down} {
+    			@include abs-centered(x);
+    			height: 50px;
+  			}
+  			@media #{$large-and-up} {
+    			@include abs-centered(x);
+    			height: 150px;
+  			}
+		}
+
+		.card-image {
+			position: relative;
+			height: 200px;
+			text-align: center;
+			>img {
+				@include abs-centered();
+				display: inline-block;
+				width: auto;
+			}
+		}
+	}
+
+}

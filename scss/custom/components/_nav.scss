@@ -2,4 +2,9 @@
 	box-shadow: none;
 	background: none;
 	height: 0;
+	#menu-icon {
+		position: absolute;
+		left: 0;
+		z-index: 100;
+	}
 }

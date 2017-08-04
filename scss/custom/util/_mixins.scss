@@ -1,0 +1,20 @@
+@mixin abs-centered($pos:all) {
+	position: absolute!important;
+
+	@if ($pos == all) {
+		top: 50%!important;;
+		left: 50%!important;;
+		transform: translate(-50%,-50%)!important;;
+	}
+
+	@else if ($pos == x) {
+		left: 50%!important;;
+		transform: translate(-50%,0)!important;;
+	}
+
+	@else if ($pos == y) {
+		top: 50%!important;;
+		transform: translate(0,-50%)!important;;
+	}
+	
+}

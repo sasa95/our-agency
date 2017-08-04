@@ -1,9 +1,16 @@
 .hero {
-	display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-	height: 100%;
-	background-image: url('../img/hero.jpg');
-	background-size: cover;
-	background-position: center right;
+    height: 100%;
+    background-image: url('../img/hero-sm.jpg');
+    background-size: cover;
+  	@media #{$large-and-up} {
+    	background-image: url('../img/header/header--16-9.png');
+    	background-position: center;
+  	}
+}
+
+main {
+	position: relative;
 }
