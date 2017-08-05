@@ -2069,9 +2069,7 @@ small { font-size: 75%; }
 
 #sidenav-overlay { position: fixed; top: 0; left: 0; right: 0; height: 120vh; background-color: rgba(0, 0, 0, 0.5); z-index: 997; will-change: opacity; }
 
-html, body, main { height: 100% !important; }
-
-.hero { overflow: hidden; position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; height: 100%; background-image: url("../img/hero-sm.jpg"); background-size: cover; }
+.hero { overflow: hidden; position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; height: 100vh; background-image: url("../img/hero-sm.jpg"); background-size: cover; }
 
 @media only screen and (min-width: 993px) { .hero { background-image: url("../img/header/animated/hands.png"); background-position: center; } }
 
