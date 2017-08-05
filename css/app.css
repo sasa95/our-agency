@@ -2075,19 +2075,19 @@ small { font-size: 75%; }
 
 @media only screen and (min-width: 993px) { .hero__triangle { position: absolute; z-index: -10; bottom: 0; right: 0; width: 100%; height: 100%; background-image: url("../img/header/animated/triangle.png"); background-position: bottom right; background-size: cover; background-repeat: no-repeat; } }
 
-@media only screen and (min-width: 993px) { .what-we-do .row:after { content: ""; position: relative; bottom: -99px; display: block; margin: 0 auto; border-bottom: 1px dashed; border-color: #bdbdbd; width: 66.5%; } }
+@media only screen and (min-width: 993px) { .what-we-do .row:after { content: ""; position: relative; bottom: -99px; display: block; margin: 0 auto; border-bottom: 1px dashed #bdbdbd; width: 66.5%; } }
 
 @media only screen and (max-width: 992px) { .what-we-do .col { float: none; } }
 
-@media only screen and (min-width: 993px) { .what-we-do .col:nth-of-type(2) .card:before { content: ""; position: absolute !important; left: 50% !important; -webkit-transform: translate(-50%, 0) !important; -ms-transform: translate(-50%, 0) !important; transform: translate(-50%, 0) !important; bottom: -220px; display: inline-block; border: 1px dashed; border-radius: 50%; border-color: #424242; width: 20px; height: 20px; } }
+@media only screen and (min-width: 993px) { .what-we-do .col:nth-of-type(2) .card:before { content: ""; position: absolute !important; left: 50% !important; -webkit-transform: translate(-50%, 0) !important; -ms-transform: translate(-50%, 0) !important; transform: translate(-50%, 0) !important; bottom: -220px; display: block; border: 1px dashed; border-radius: 50%; border-color: #424242; width: 20px; height: 20px; } }
 
 @media only screen and (min-width: 993px) { .what-we-do .col:nth-of-type(2) .card:after { height: 200px; } }
 
-@media only screen and (max-width: 992px) { .what-we-do .col:last-child .card:before { content: ""; position: absolute !important; left: 50% !important; -webkit-transform: translate(-50%, 0) !important; -ms-transform: translate(-50%, 0) !important; transform: translate(-50%, 0) !important; bottom: -70px; display: inline-block; border: 1px dashed; border-radius: 50%; border-color: #424242; width: 20px; height: 20px; } }
+@media only screen and (max-width: 992px) { .what-we-do .col:last-child .card:before { content: ""; position: absolute !important; left: 50% !important; -webkit-transform: translate(-50%, 0) !important; -ms-transform: translate(-50%, 0) !important; transform: translate(-50%, 0) !important; bottom: -70px; display: block; border: 1px dashed; border-radius: 50%; border-color: #424242; width: 20px; height: 20px; } }
 
 .what-we-do .card { position: relative; margin: 7px auto 50px; max-width: 250px; }
 
-.what-we-do .card:after { content: ""; display: block; border-left: 1px dashed; border-color: #bdbdbd; width: 2px; }
+.what-we-do .card:after { content: ""; display: block; border-left: 1px dashed #bdbdbd; width: 2px; }
 
 @media only screen and (max-width: 992px) { .what-we-do .card:after { position: absolute !important; left: 50% !important; -webkit-transform: translate(-50%, 0) !important; -ms-transform: translate(-50%, 0) !important; transform: translate(-50%, 0) !important; height: 50px; } }
 

@@ -2,19 +2,31 @@
 	position: absolute!important;
 
 	@if ($pos == all) {
-		top: 50%!important;;
-		left: 50%!important;;
+		top: 50%!important;
+		left: 50%!important;
 		transform: translate(-50%,-50%)!important;;
 	}
 
 	@else if ($pos == x) {
-		left: 50%!important;;
+		left: 50%!important;
 		transform: translate(-50%,0)!important;;
 	}
 
 	@else if ($pos == y) {
-		top: 50%!important;;
+		top: 50%!important;
 		transform: translate(0,-50%)!important;;
 	}
 	
+}
+
+@mixin circle-border($bottom) {
+	content: "";
+	@include abs-centered(x);
+	bottom:$bottom;
+	display: block;
+	border: 1px dashed;
+	border-radius: 50%;
+	border-color: color("grey", "darken-3");
+	width: 20px;
+	height: 20px;
 }

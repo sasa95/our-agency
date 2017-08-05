@@ -6,8 +6,7 @@
 			bottom: -99px;
 			display: block;
 			margin: 0 auto;
-			border-bottom: 1px dashed;
-			border-color: color("grey", "lighten-1");
+			border-bottom: 1px dashed color("grey", "lighten-1");
 			width: 66.5%;	
   		}
 	}
@@ -17,15 +16,7 @@
   		}
   		&:nth-of-type(2) .card:before {
 			@media #{$large-and-up} {
-				content: "";
-				@include abs-centered(x);
-				bottom: -220px;
-	  			display: inline-block;
-	  			border: 1px dashed;
-	  			border-radius: 50%;
-	  			border-color: color("grey", "darken-3");
-				width: 20px;
-				height: 20px;
+				@include circle-border(-220px);
     		}
   		}
   		&:nth-of-type(2) .card:after {
@@ -35,19 +26,8 @@
   		}
   		&:last-child .card:before {
 			@media #{$medium-and-down} {
-				content: "";
-				@include abs-centered(x);
-				bottom: -70px;
-	  			display: inline-block;
-	  			border: 1px dashed;
-	  			border-radius: 50%;
-	  			border-color: color("grey", "darken-3");
-				width: 20px;
-				height: 20px;
+				@include circle-border(-70px);
     		}
-    		@media #{$large-and-up} {
-    			// styles for large screens and up
-  			}
   		}
 	}
 	.card {
@@ -57,8 +37,7 @@
 		&:after {
 			content: "";
 			display: block;
-			border-left: 1px dashed;
-			border-color: color("grey", "lighten-1");
+			border-left: 1px dashed color("grey", "lighten-1");
 			width: 2px;
 			@media #{$medium-and-down} {
     			@include abs-centered(x);
