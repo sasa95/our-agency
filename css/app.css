@@ -2071,9 +2071,11 @@ small { font-size: 75%; }
 
 html, body, main { height: 100% !important; }
 
-.hero { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; height: 100%; background-image: url("../img/hero-sm.jpg"); background-size: cover; }
+.hero { overflow: hidden; position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; height: 100%; background-image: url("../img/hero-sm.jpg"); background-size: cover; }
 
-@media only screen and (min-width: 993px) { .hero { background-image: url("../img/header/header--16-9.png"); background-position: center; } }
+@media only screen and (min-width: 993px) { .hero { background-image: url("../img/header/animated/hands.png"); background-position: center; } }
+
+@media only screen and (min-width: 993px) { .hero__triangle { position: absolute; z-index: -10; bottom: 0; right: 0; width: 100%; height: 100%; background-image: url("../img/header/animated/triangle.png"); background-position: bottom right; background-size: cover; background-repeat: no-repeat; } }
 
 main { position: relative; }
 
@@ -2102,3 +2104,9 @@ main { position: relative; }
 #main-nav { -webkit-box-shadow: none; box-shadow: none; background: none; height: 0; }
 
 #main-nav #menu-icon { position: absolute; left: 0; z-index: 100; }
+
+.hero__triangle { -webkit-animation: move-triangle .7s ease-in; animation: move-triangle .7s ease-in; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-delay: 1s; animation-delay: 1s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-transform: translate(100%, 50%); -ms-transform: translate(100%, 50%); transform: translate(100%, 50%); }
+
+@-webkit-keyframes move-triangle { 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); } }
+
+@keyframes move-triangle { 100% { -webkit-transform: translate(0, 0); transform: translate(0, 0); } }

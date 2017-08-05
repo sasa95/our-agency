@@ -1,4 +1,6 @@
 .hero {
+  overflow: hidden;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,9 +8,24 @@
     background-image: url('../img/hero-sm.jpg');
     background-size: cover;
   	@media #{$large-and-up} {
-    	background-image: url('../img/header/header--16-9.png');
+    	background-image: url('../img/header/animated/hands.png');
     	background-position: center;
   	}
+}
+
+.hero__triangle {
+  @media #{$large-and-up} {
+    position: absolute;
+    z-index: -10;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/header/animated/triangle.png');
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 main {
