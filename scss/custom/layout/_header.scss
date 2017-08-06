@@ -3,67 +3,68 @@
     position: relative;
     height: 100vh;
     @extend .light-blue, .lighten-1;
-  	@media #{$large-and-up} {
-    	background:white;
-    	background-position: bottom;
-        background-size: cover;
-  	}
-    blockquote {
-        @include abs-centered(y);
-
+    & > .container {
+        height: 100%;
     }
-}
-
-.hexagon-container {
-    @include abs-centered(y);
-    position: absolute;
-    right: 170px;
-}
-
-.hexagon {
-    width: 500px;
-    height: 250px;
-    background: red;
-    transform:rotate(120deg);
-    overflow: hidden;
-    visibility: hidden;
-}
-
-.hexagon:last-child {
-    position: absolute;
-    right: -45%;
-    top: 25%;
-}
-
-.hexagon-inside {
-    width: 100;
-    height: 100%;
-    background: green;
-    transform:rotate(-60deg);
-    overflow: hidden;
-}
-
-.hexagon-image {
-    width: 100%;
-    height: 100%;
-    transform:rotate(-60deg);
-    visibility: visible;
-}
-
-.hexagon:first-child .hexagon-image {
-    background-image: url('../img/header/16-9/1.jpg');
-    background-position: center;
-    background-size: cover;
-}
-
-.hexagon:nth-child(2) .hexagon-image {
-    background-image: url('../img/header/16-9/2.jpg');
-    background-position: top;
-    background-size: cover;
-}
-
-.hexagon:nth-child(3) .hexagon-image {
-    background-image: url('../img/header/16-9/3.jpg');
-    background-position: center;
-    background-size: cover;
+    blockquote {
+        display: table;
+        margin: 70px auto 30px;
+        border-left: 10px solid #fff;
+        h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 3.4em;
+            font-weight: bold;
+        }
+    }
+    .hexagon-container {
+        position: relative;
+        right: 50px;
+        display: table;
+        margin: auto;
+    }
+    .hexagon {
+        width: 360px;
+        height: 180px;
+        background: red;
+        transform:rotate(120deg);
+        overflow: hidden;
+        visibility: hidden;
+        &:first-child {
+           position: relative;
+           bottom: 4px;
+        }
+        &:last-child {
+           position: absolute;
+           top: 25%;
+           left: 160px;
+        }
+        &-inside {
+            width: 100;
+            height: 100%;
+            background: green;
+            transform:rotate(-60deg);
+            overflow: hidden; 
+        }
+        &-image {
+            width: 100%;
+            height: 100%;
+            transform:rotate(-60deg);
+            visibility: visible;
+        }
+        &:first-child .hexagon-image {
+            background-image: url('../img/header/16-9/1.jpg');
+        }
+        &:nth-child(2) .hexagon-image {
+            background-image: url('../img/header/16-9/2.jpg');
+            background-position: top;
+        }
+        &:nth-child(3) .hexagon-image {
+            background-image: url('../img/header/16-9/3.jpg');
+        }
+        .hexagon-image {
+            background-position: center;
+            background-size: cover;
+        }
+    }
 }
