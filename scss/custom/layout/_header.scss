@@ -1,29 +1,69 @@
 .hero {
     overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 100vh;
-    background-image: url('../img/hero-sm.jpg');
-    background-size: cover;
+    @extend .light-blue, .lighten-1;
   	@media #{$large-and-up} {
-    	background-image: url('../img/header/animated/hands.png');
-    	background-position: center;
+    	background:white;
+    	background-position: bottom;
+        background-size: cover;
   	}
+    blockquote {
+        @include abs-centered(y);
+
+    }
 }
 
-.hero__triangle {
-    @media #{$large-and-up} {
-        position: absolute;
-        z-index: -10;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('../img/header/animated/triangle.png');
-        background-position: bottom right;
-        background-size: cover;
-        background-repeat: no-repeat;
-  }
+.hexagon-container {
+    @include abs-centered(y);
+    position: absolute;
+    right: 170px;
+}
+
+.hexagon {
+    width: 500px;
+    height: 250px;
+    background: red;
+    transform:rotate(120deg);
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.hexagon:last-child {
+    position: absolute;
+    right: -45%;
+    top: 25%;
+}
+
+.hexagon-inside {
+    width: 100;
+    height: 100%;
+    background: green;
+    transform:rotate(-60deg);
+    overflow: hidden;
+}
+
+.hexagon-image {
+    width: 100%;
+    height: 100%;
+    transform:rotate(-60deg);
+    visibility: visible;
+}
+
+.hexagon:first-child .hexagon-image {
+    background-image: url('../img/header/16-9/1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.hexagon:nth-child(2) .hexagon-image {
+    background-image: url('../img/header/16-9/2.jpg');
+    background-position: top;
+    background-size: cover;
+}
+
+.hexagon:nth-child(3) .hexagon-image {
+    background-image: url('../img/header/16-9/3.jpg');
+    background-position: center;
+    background-size: cover;
 }

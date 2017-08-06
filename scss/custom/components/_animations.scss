@@ -1,10 +1,10 @@
-.hero__triangle {
-	animation: move-triangle .7s ease-in;
-	animation-iteration-count:1;
-	animation-delay:1s;
-	animation-fill-mode: forwards;
-	transform:translate(100%,50%)
-}
+// .hero__triangle {
+// 	animation: move-triangle .7s ease-in;
+// 	animation-iteration-count:1;
+// 	animation-delay:1s;
+// 	animation-fill-mode: forwards;
+// 	transform:translate(100%,50%)
+// }
 
 @keyframes move-triangle {
 	100% {
