@@ -1,0 +1,31 @@
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) { .hero { height: auto; min-height: 768px; } }
+
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) { .hero { height: auto; min-height: 1024px; } }
+
+/* iphone5 */
+@media only screen and (device-width: 320px) and (device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) { .hero { height: auto; min-height: 320px; } }
+
+@media only screen and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) { .hero { height: auto; min-height: 568px; } }
+
+/* iPhone 4 */
+@media only screen and (device-width: 320px) and (device-height: 480px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) { .hero { height: auto; min-height: 320px; } }
+
+@media only screen and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) { .hero { height: auto; min-height: 480px; } }
+
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) { .hero { height: auto; min-height: 768px; } }
+
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) { .hero { height: auto; min-height: 1024px; } }
+
+/* iphone5 */
+@media only screen and (device-width: 320px) and (device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) { .hero { height: auto; min-height: 320px; } }
+
+@media only screen and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) { .hero { height: auto; min-height: 568px; } }
+
+/* iPhone 4 */
+@media only screen and (device-width: 320px) and (device-height: 480px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) { .hero { height: auto; min-height: 320px; } }
+
+@media only screen and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) { .hero { height: auto; min-height: 480px; } }

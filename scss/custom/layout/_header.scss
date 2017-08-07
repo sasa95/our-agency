@@ -2,6 +2,7 @@
     overflow: hidden;
     position: relative;
     height: 100vh;
+    min-height: 100vh;
     @extend .light-blue, .lighten-1;
     & > .container {
         height: 100%;
@@ -13,58 +14,63 @@
         h1 {
             margin: 0;
             color: #fff;
-            font-size: 3.4em;
+            font-size: 2.4em;
             font-weight: bold;
         }
     }
     .hexagon-container {
         position: relative;
-        right: 50px;
+        right: 57px;
         display: table;
         margin: auto;
+            .hexagon {
+                width: 260px;
+                height: 130px;
+                background: red;
+                transform:rotate(120deg);
+                overflow: hidden;
+                visibility: hidden;
+                &:first-child {
+                   position: relative;
+                   bottom: 4px;
+                }
+                &:last-child {
+                   position: absolute;
+                   top: 25%;
+                   left: 116px;
+                }
+                &-inside {
+                    width: 100;
+                    height: 100%;
+                    background: green;
+                    transform:rotate(-60deg);
+                    overflow: hidden; 
+                }
+                &-image {
+                    width: 100%;
+                    height: 100%;
+                    transform:rotate(-60deg);
+                    visibility: visible;
+                }
+                &:first-child .hexagon-image {
+                    background-image: url('../img/header/16-9/1.jpg');
+                }
+                &:nth-child(2) .hexagon-image {
+                    background-image: url('../img/header/16-9/2.jpg');
+                    background-position: top;
+                }
+                &:nth-child(3) .hexagon-image {
+                    background-image: url('../img/header/16-9/3.jpg');
+                }
+                .hexagon-image {
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
     }
-    .hexagon {
-        width: 360px;
-        height: 180px;
-        background: red;
-        transform:rotate(120deg);
-        overflow: hidden;
-        visibility: hidden;
-        &:first-child {
-           position: relative;
-           bottom: 4px;
-        }
-        &:last-child {
-           position: absolute;
-           top: 25%;
-           left: 160px;
-        }
-        &-inside {
-            width: 100;
-            height: 100%;
-            background: green;
-            transform:rotate(-60deg);
-            overflow: hidden; 
-        }
-        &-image {
-            width: 100%;
-            height: 100%;
-            transform:rotate(-60deg);
-            visibility: visible;
-        }
-        &:first-child .hexagon-image {
-            background-image: url('../img/header/16-9/1.jpg');
-        }
-        &:nth-child(2) .hexagon-image {
-            background-image: url('../img/header/16-9/2.jpg');
-            background-position: top;
-        }
-        &:nth-child(3) .hexagon-image {
-            background-image: url('../img/header/16-9/3.jpg');
-        }
-        .hexagon-image {
-            background-position: center;
-            background-size: cover;
-        }
+    .logo {
+        @include abs-centered(x);
+        bottom: 10px;
+        width: 30px;
     }
 }
