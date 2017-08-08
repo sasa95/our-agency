@@ -146,12 +146,104 @@
     }
 }
 
-// PC
-
-@media #{$large-and-up} {
-    body {
-        background: red;
+@media (width: 1024px) and (height: 768px) and (orientation:landscape) {
+    .hero blockquote h1 {
+        font-size: 2em;
+    }
+    .hero .hexagon-container {
+        @include abs-centered(y);
+        right: 90px;
+    }
+    .hero .hexagon-container .hexagon {
+        width: 320px;
+        height: 160px;      
+    }
+    .hero .hexagon-container .hexagon:last-child {
+        left: 142px;
     }
 }
 
+// PC
+
+@media (min-width: 769px) {
+    .hero blockquote {
+        padding-left: 20px;
+    }
+    .hero blockquote h1 {
+        font-size: 3.6em;
+    }
+    .hero .hexagon-container {
+        @include abs-centered(y);
+        right: 100px;
+    }
+    .hero .hexagon-container .hexagon {
+        width: 340px;
+        height: 170px;      
+    }
+    .hero .hexagon-container .hexagon:last-child {
+        left: 152px;
+    }
+}
+
+@media (min-width: 850px) {
+    .hero blockquote h1 {
+        font-size: 3.8em;
+    }
+    .hero .hexagon-container {
+        @include abs-centered(y);
+        right: 120px;
+    }
+    .hero .hexagon-container .hexagon {
+        width: 380px;
+        height: 190px;      
+    }
+    .hero .hexagon-container .hexagon:last-child {
+        left: 170px;
+    }
+}
+
+@media #{$large-and-up} {
+    .hero > .container {
+        position: relative;
+    }
+    .hero blockquote {
+        left: -50px;
+        border-left-width: 10px;
+    }
+    .hero blockquote h1 {
+        font-size: 3.7em;
+    }
+    .hero .hexagon-container {
+        @include abs-centered(y);
+        right: 0px;
+    }
+    .hero .hexagon-container .hexagon {
+        width: 450px;
+        height: 225px;      
+    }
+    .hero .hexagon-container .hexagon:last-child {
+        left: 200px;
+    }
+    .hero .logo {
+        @include abs-centered(x);
+        width: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero blockquote {
+        // left: 0;
+        h1 {
+            font-size: 4.5em;
+        }
+    }
+}
+@media (min-width: 1250px) {
+    .hero blockquote {
+        // left: 0;
+        h1 {
+            font-size: 5em;
+        }
+    }
+}
 
