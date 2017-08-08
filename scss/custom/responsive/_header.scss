@@ -1,109 +1,115 @@
 
+// iPhone 5
 @media (min-height: 520px) and (orientation:portrait) {
     .hero blockquote {
         margin-bottom: 50px;
     }
 }
 
+// S3
 @media (min-width: 360px) and (orientation:portrait) {
-    .hero .hexagon-container {
-        right: 65px;
+    .hero {
+        .hexagon-container {
+            right: 65px;
+            .hexagon {
+                width: 310px;
+                height: 155px;
+                &:last-child {
+                    left: 134px;   
+                }
+            }
+        }
     }
-
-    .hero .hexagon-container .hexagon {
-        width: 310px;
-        height: 155px;      
-    }
-    
-     .hero .hexagon-container .hexagon:last-child {
-        left: 138px;
-     }
 }
 
 @media (min-width: 360px) and (max-height: 550px) and (orientation:portrait) {
-    .hero .hexagon-container .hexagon {
-        width: 300px;
-        height: 150px;           
-    }
-
-    .hero .hexagon-container .hexagon:last-child {
-        left: 135px;
-     }
-
-    .hero blockquote {
-        margin-bottom: 30px;
+    .hero {
+        blockquote {
+            margin-bottom: 30px;
+        }
+        .hexagon-container {
+            right: 65px;
+            .hexagon {
+                width: 300px;
+                height: 150px;   
+                &:last-child {
+                    left: 135px;   
+                }
+            }
+        }
     }
 }
 
 @media (min-width: 412px) and (orientation:portrait) {
-    .hero blockquote {
-        margin-bottom: 70px;
-        h1 {
-            font-size: 3em;
+    .hero {
+        blockquote {
+            margin-bottom: 70px;
+            h1 {
+                font-size: 3em;
+            }
+        }
+        .hexagon-container {
+            right: 90px;
+            .hexagon {
+                width: 380px;
+                height: 190px;     
+                &:last-child {
+                    left: 170px;   
+                }
+            }
         }
     }
-    .hero .hexagon-container {
-        right: 90px;
-    }
-
-    .hero .hexagon-container .hexagon {
-        width: 380px;
-        height: 190px;      
-    }
-    
-     .hero .hexagon-container .hexagon:last-child {
-        left: 170px;
-     }
 }
 
 @media (min-width: 768px) and (orientation:portrait) {
-    .hero blockquote {
-        margin-bottom: 70px;
-        h1 {
-            font-size: 5.5em;
+    .hero {
+        blockquote {
+            margin-bottom: 70px;
+            h1 {
+                font-size: 5.5em;
+            }
+        }
+        .hexagon-container {
+            right: 145px;
+            .hexagon {
+                width: 650px;
+                height: 325px;     
+                &:last-child {
+                    left: 290px;   
+                }
+                .logo {
+                    width: 40px;
+                }
+            }
         }
     }
-    .hero .hexagon-container {
-        right: 145px;
-    }
-
-    .hero .hexagon-container .hexagon {
-        width: 650px;
-        height: 325px;      
-    }
-    
-     .hero .hexagon-container .hexagon:last-child {
-        left: 290px;
-     }
-     .hero .logo {
-        width: 40px;
-     }
 }
 
 // Landscape
-
 @media (min-width: 480px) and (min-height: 320px) and (orientation:landscape) {
-     .hero blockquote {
-       @include abs-centered(y);
-       left: 20px;
-       margin:0;
-       padding-left: 10px;
-       border-left-width: 5px;
-       h1 {
-        font-size: 1.7em;
-       }
+    .hero {
+        blockquote {
+            @include abs-centered(y);
+            left: 20px;
+            margin:0;
+            padding-left: 10px;
+            border-left-width: 5px;
+            h1 {
+                font-size: 1.7em;
+            }
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 70px;
+            .hexagon:last-child {
+                left: 117px;
+            }
+        }
+        .logo {
+            left: 35px!important;
+            right: auto;
+        }
     }
-    .hero .hexagon-container {
-        @include abs-centered(y);
-        right: 70px;
-    }
-     .hero .hexagon-container .hexagon:last-child {
-        left: 117px;
-     }
-     .hero .logo {
-        left: 35px!important;
-        right: auto;
-     }
 }
 
 @media (min-width: 560px) and (min-height: 320px) and (orientation:landscape) {
@@ -113,137 +119,142 @@
 }
 
 @media (min-width: 640px) and (min-height: 360px) and (orientation:landscape) {
-     .hero blockquote h1 {
-        font-size: 3em;
-    }
-    .hero .hexagon-container {
-        @include abs-centered(y);
-        right: 90px;
-    }
-    .hero .hexagon-container .hexagon {
-        width: 320px;
-        height: 160px;      
-    }
-    .hero .hexagon-container .hexagon:last-child {
-        left: 142px;
+    .hero {
+        blockquote h1 {
+            font-size: 3em;
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 90px;
+            .hexagon {
+                width: 320px;
+                height: 160px;
+                &:last-child {
+                    left: 142px;
+                }      
+            }
+        } 
     }
 }
 
 @media (min-width: 730px) and (min-height: 400px) and (orientation:landscape) {
-    .hero blockquote h1 {
-        font-size: 3em;
-    }
-    .hero .hexagon-container {
-        @include abs-centered(y);
-        right: 90px;
-    }
-    .hero .hexagon-container .hexagon {
-        width: 320px;
-        height: 160px;      
-    }
-    .hero .hexagon-container .hexagon:last-child {
-        left: 142px;
+    .hero {
+        blockquote h1 {
+            font-size: 3em;
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 90px;
+            .hexagon {
+                width: 320px;
+                height: 160px;
+                &:last-child {
+                    left: 142px;
+                }      
+            }
+        } 
     }
 }
 
 @media (width: 1024px) and (height: 768px) and (orientation:landscape) {
-    .hero blockquote h1 {
-        font-size: 2em;
-    }
-    .hero .hexagon-container {
-        @include abs-centered(y);
-        right: 90px;
-    }
-    .hero .hexagon-container .hexagon {
-        width: 320px;
-        height: 160px;      
-    }
-    .hero .hexagon-container .hexagon:last-child {
-        left: 142px;
+    .hero {
+        blockquote h1 {
+            font-size: 2em;
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 90px;
+            .hexagon {
+                width: 320px;
+                height: 160px;
+                &:last-child {
+                    left: 142px;
+                }      
+            }
+        } 
     }
 }
 
 // PC
-
 @media (min-width: 769px) {
-    .hero blockquote {
-        padding-left: 20px;
-    }
-    .hero blockquote h1 {
-        font-size: 3.6em;
-    }
-    .hero .hexagon-container {
-        @include abs-centered(y);
-        right: 100px;
-    }
-    .hero .hexagon-container .hexagon {
-        width: 340px;
-        height: 170px;      
-    }
-    .hero .hexagon-container .hexagon:last-child {
-        left: 152px;
+    .hero {
+        blockquote {
+            padding-left: 20px; 
+            h1 {
+                font-size: 3.6em;
+            }
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 100px;
+            .hexagon {
+                width: 340px;
+                height: 170px;
+                &:last-child {
+                    left: 152px;
+                }      
+            }
+        } 
     }
 }
 
 @media (min-width: 850px) {
-    .hero blockquote h1 {
-        font-size: 3.8em;
-    }
-    .hero .hexagon-container {
-        @include abs-centered(y);
-        right: 120px;
-    }
-    .hero .hexagon-container .hexagon {
-        width: 380px;
-        height: 190px;      
-    }
-    .hero .hexagon-container .hexagon:last-child {
-        left: 170px;
+    .hero {
+        blockquote h1 {
+            font-size: 3.8em;
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 120px;
+            .hexagon {
+                width: 380px;
+                height: 190px;          
+                &:last-child {
+                    left: 170px;
+                }      
+            }
+        } 
     }
 }
 
 @media #{$large-and-up} {
-    .hero > .container {
-        position: relative;
-    }
-    .hero blockquote {
-        left: -50px;
-        border-left-width: 10px;
-    }
-    .hero blockquote h1 {
-        font-size: 3.7em;
-    }
-    .hero .hexagon-container {
-        @include abs-centered(y);
-        right: 0px;
-    }
-    .hero .hexagon-container .hexagon {
-        width: 450px;
-        height: 225px;      
-    }
-    .hero .hexagon-container .hexagon:last-child {
-        left: 200px;
-    }
-    .hero .logo {
-        @include abs-centered(x);
-        width: 50px;
+    .hero {
+        .container {
+            position: relative;
+        }
+        blockquote {
+            left: -50px;
+            border-left-width: 10px;
+            h1 {
+                font-size: 3.7em;
+            }
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 0;
+            .hexagon {
+                width: 450px;
+                height: 225px;               
+                &:last-child {
+                    left: 200px;
+                }      
+            }
+        } 
+        .logo {
+            @include abs-centered(x);
+            width: 50px;    
+        }
     }
 }
 
 @media (min-width: 1200px) {
-    .hero blockquote {
-        // left: 0;
-        h1 {
-            font-size: 4.5em;
-        }
+    .hero blockquote h1 {
+        font-size: 4.5em;
     }
 }
 @media (min-width: 1250px) {
-    .hero blockquote {
-        // left: 0;
-        h1 {
-            font-size: 5em;
-        }
+    .hero blockquote h1 {
+        font-size: 5em;
     }
 }
 
