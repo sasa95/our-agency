@@ -2199,6 +2199,12 @@ small { font-size: 75%; }
 
 @media (min-width: 1250px) { .hero blockquote h1 { font-size: 5em; } }
 
+@media (min-width: 1440px) { .hero blockquote { left: -100px; }
+  .hero blockquote h1 { font-size: 6em; }
+  .hero .hexagon-container .hexagon { width: 600px; height: 300px; }
+  .hero .hexagon-container .hexagon:last-child { left: 265px; }
+  .hero .logo { position: absolute !important; left: 50% !important; -webkit-transform: translate(-50%, 0) !important; -ms-transform: translate(-50%, 0) !important; transform: translate(-50%, 0) !important; width: 70px; } }
+
 /* fix iOS bug not displaying 100vh correctly */
 /* ipad */
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) { .hero { height: auto; min-height: 768px; } }
