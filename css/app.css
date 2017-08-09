@@ -2073,11 +2073,15 @@ small { font-size: 75%; }
 
 .hero > .container { height: 100%; }
 
-.hero blockquote { display: table; margin: 70px auto 30px; border-left: 10px solid #fff; }
+.hero blockquote { display: table; border-left: 10px solid #fff; }
+
+@media (max-width: 768px) and (orientation: portrait) { .hero blockquote { position: absolute !important; left: 50% !important; -webkit-transform: translate(-50%, 0) !important; -ms-transform: translate(-50%, 0) !important; transform: translate(-50%, 0) !important; } }
+
+@media (width: 320px) and (height: 480px) { .hero blockquote { top: 35px; } }
 
 .hero blockquote h1 { margin: 0; color: #fff; font-size: 2.4em; font-weight: bold; }
 
-.hero .hexagon-container { position: relative; right: 57px; display: table; margin: 0 auto; }
+.hero .hexagon-container { position: relative; right: 57px; display: table; margin: 0 auto; top: 150px; }
 
 .hero .hexagon-container .hexagon { width: 260px; height: 130px; -webkit-transform: rotate(120deg); -ms-transform: rotate(120deg); transform: rotate(120deg); overflow: hidden; visibility: hidden; }
 
@@ -2142,10 +2146,10 @@ small { font-size: 75%; }
   .hero .hexagon-container .hexagon { width: 380px; height: 190px; }
   .hero .hexagon-container .hexagon:last-child { left: 170px; } }
 
-@media (min-width: 768px) and (orientation: portrait) { .hero blockquote h1 { font-size: 5.5em; }
-  .hero .hexagon-container { right: 145px; margin-top: 70px; }
-  .hero .hexagon-container .hexagon { width: 650px; height: 325px; }
-  .hero .hexagon-container .hexagon:last-child { left: 290px; }
+@media (min-width: 768px) and (orientation: portrait) { .hero blockquote h1 { font-size: 5em; }
+  .hero .hexagon-container { right: 125px; top: 220px; }
+  .hero .hexagon-container .hexagon { width: 550px; height: 275px; }
+  .hero .hexagon-container .hexagon:last-child { left: 245px; }
   .hero .hexagon-container .hexagon .logo { width: 40px; } }
 
 @media (min-width: 480px) and (min-height: 320px) and (orientation: landscape) { .hero blockquote { position: absolute !important; top: 50% !important; -webkit-transform: translate(0, -50%) !important; -ms-transform: translate(0, -50%) !important; transform: translate(0, -50%) !important; left: 20px; margin: 0; padding-left: 10px; border-left-width: 5px; }
@@ -2171,7 +2175,7 @@ small { font-size: 75%; }
   .hero .hexagon-container .hexagon { width: 320px; height: 160px; }
   .hero .hexagon-container .hexagon:last-child { left: 142px; } }
 
-@media (min-width: 769px) { .hero blockquote { padding-left: 20px; }
+@media (min-width: 769px) { .hero blockquote { position: absolute !important; top: 50% !important; -webkit-transform: translate(0, -50%) !important; -ms-transform: translate(0, -50%) !important; transform: translate(0, -50%) !important; padding-left: 20px; }
   .hero blockquote h1 { font-size: 3.6em; }
   .hero .hexagon-container { position: absolute !important; top: 50% !important; -webkit-transform: translate(0, -50%) !important; -ms-transform: translate(0, -50%) !important; transform: translate(0, -50%) !important; right: 100px; }
   .hero .hexagon-container .hexagon { width: 340px; height: 170px; }
@@ -2199,6 +2203,11 @@ small { font-size: 75%; }
   .hero .hexagon-container .hexagon { width: 600px; height: 300px; }
   .hero .hexagon-container .hexagon:last-child { left: 265px; }
   .hero .logo { position: absolute !important; left: 50% !important; -webkit-transform: translate(-50%, 0) !important; -ms-transform: translate(-50%, 0) !important; transform: translate(-50%, 0) !important; width: 70px; } }
+
+@media (width: 1366px) and (height: 1024px) and (orientation: landscape) { .hero blockquote h1 { font-size: 5.5em; }
+  .hero .hexagon-container { position: absolute !important; top: 50% !important; -webkit-transform: translate(0, -50%) !important; -ms-transform: translate(0, -50%) !important; transform: translate(0, -50%) !important; right: 0px; }
+  .hero .hexagon-container .hexagon { width: 550px; height: 275px; }
+  .hero .hexagon-container .hexagon:last-child { left: 242px; } }
 
 /* fix iOS bug not displaying 100vh correctly */
 /* ipad */

@@ -65,17 +65,17 @@
     .hero {
         blockquote {
             h1 {
-                font-size: 5.5em;
+                font-size: 5em;
             }
         }
         .hexagon-container {
-            right: 145px;
-            margin-top: 70px;
+            right: 125px;
+            top: 220px;
             .hexagon {
-                width: 650px;
-                height: 325px;     
+                width: 550px;
+                height: 275px;     
                 &:last-child {
-                    left: 290px;   
+                    left: 245px;   
                 }
                 .logo {
                     width: 40px;
@@ -182,10 +182,13 @@
     }
 }
 
+
+
 // PC
 @media (min-width: 769px) {
     .hero {
         blockquote {
+            @include abs-centered(y);
             padding-left: 20px; 
             h1 {
                 font-size: 3.6em;
@@ -287,5 +290,25 @@
             @include abs-centered(x);
             width: 70px;    
         }
+    }
+}
+
+// iPad Pro
+@media (width: 1366px) and (height: 1024px) and (orientation:landscape) {
+    .hero {
+        blockquote h1 {
+            font-size: 5.5em;
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 0px;
+            .hexagon {
+                width: 550px;
+                height: 275px;
+                &:last-child {
+                    left: 242px;
+                }      
+            }
+        } 
     }
 }
