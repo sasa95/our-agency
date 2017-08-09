@@ -197,6 +197,7 @@
         .hexagon-container {
             @include abs-centered(y);
             right: 100px;
+            margin-top: 0;
             .hexagon {
                 width: 340px;
                 height: 170px;
