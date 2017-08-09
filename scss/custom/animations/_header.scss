@@ -1,0 +1,63 @@
+.hero {
+	.logo {
+		opacity: 0;
+		animation: 1s ease-out 1 forwards logo-slide-up;
+	}
+	.hexagon-container {
+		.hexagon {
+			&:first-child {
+				transform:translateY(-500%) rotate(120deg);
+				animation: 1s ease-out 1s 1 forwards first-two-hexagons;
+			}
+			&:nth-child(2) {
+				transform:translateY(500%) rotate(120deg);
+				animation: 1s ease-out 2s 1 forwards first-two-hexagons;
+			}
+			&:nth-child(3) {
+				transform:translateX(200%) rotate(120deg);
+				animation: 1s ease-out 3s 1 forwards third-hexagon;
+			}	
+		}
+	}
+}
+
+@keyframes logo-slide-up {
+	100% {
+		opacity: 1;
+	}
+}
+
+ @keyframes first-two-hexagons {
+	100% {
+		transform:translateY(0) rotate(120deg);
+	}
+}
+
+@keyframes third-hexagon {
+	100% {
+		transform:translateX(0) rotate(120deg);
+	}
+}
+
+
+#cursor {
+	animation: .6s ease-out .5s infinite alternate blinking-cursor;
+}
+
+@keyframes blinking-cursor {
+	0% {
+		opacity: 1;
+	}
+
+	50 {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.blink {
+	background: red;
+}

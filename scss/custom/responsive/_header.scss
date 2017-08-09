@@ -1,8 +1,8 @@
 
 // iPhone 5
 @media (min-height: 520px) and (orientation:portrait) {
-    .hero blockquote {
-        margin-bottom: 50px;
+    .hero .hexagon-container {
+        margin-top: 50px;
     }
 }
 
@@ -15,7 +15,7 @@
                 width: 310px;
                 height: 155px;
                 &:last-child {
-                    left: 134px;   
+                    left: 139px;   
                 }
             }
         }
@@ -24,11 +24,9 @@
 
 @media (min-width: 360px) and (max-height: 550px) and (orientation:portrait) {
     .hero {
-        blockquote {
-            margin-bottom: 30px;
-        }
         .hexagon-container {
             right: 65px;
+            margin-top: 30px;
             .hexagon {
                 width: 300px;
                 height: 150px;   
@@ -44,13 +42,13 @@
 @media (min-width: 412px) and (orientation:portrait) {
     .hero {
         blockquote {
-            margin-bottom: 70px;
             h1 {
                 font-size: 3em;
             }
         }
         .hexagon-container {
             right: 90px;
+            margin-top: 70px;
             .hexagon {
                 width: 380px;
                 height: 190px;     
@@ -66,13 +64,13 @@
 @media (min-width: 768px) and (orientation:portrait) {
     .hero {
         blockquote {
-            margin-bottom: 70px;
             h1 {
                 font-size: 5.5em;
             }
         }
         .hexagon-container {
             right: 145px;
+            margin-top: 70px;
             .hexagon {
                 width: 650px;
                 height: 325px;     
@@ -105,6 +103,7 @@
         .hexagon-container {
             @include abs-centered(y);
             right: 70px;
+            margin-top: 0;
             .hexagon:last-child {
                 left: 117px;
             }
