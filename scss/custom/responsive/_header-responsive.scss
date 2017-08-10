@@ -1,0 +1,329 @@
+@media (min-width: 320px) {
+  .hero blockquote {
+    top: 35px;
+  }
+}
+
+@media (device-width:320px) and (device-height: 480px) and (orientation: landscape),
+(min-device-height: 320px) and (min-device-width: 480px) and (orientation:landscape){
+      .hero {
+        blockquote {
+            @include abs-centered(y);
+            left: 20px!important;
+            margin:0;
+            padding-left: 10px;
+            border-left-width: 5px;
+            h1 {
+                font-size: 1.7em;
+            }
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 70px;
+            margin-top: 0;
+            .hexagon:last-child {
+                left: 117px;
+            }
+        }
+        .logo {
+            left: 35px!important;
+            right: auto;
+        }
+    }
+}
+
+
+
+@media (device-width: 320px) and (device-height: 568px) and (orientation: portrait),
+(min-device-width: 320px) and (min-device-height: 568px) {
+  .hero {
+    blockquote {
+      top: 55px;
+    }
+    .hexagon-container {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (device-width:320px) and (device-height: 568px) and (orientation: landscape),
+(min-device-height: 320px) and (min-device-width: 568px) and (orientation:landscape){
+  .hero blockquote h1 {
+        font-size: 2.6em;
+    }
+}
+
+@media (min-device-width:360px) and (min-device-height:530px) and (max-device-height:390px) and (orientation: portrait) {
+  .hero .hexagon-container {
+    top: 200px;
+  }
+}
+
+@media (min-device-width: 360px) and (min-device-height:640px) and (orientation: portrait){
+  .hero {
+    blockquote {
+      top: 55px;
+      h1 {
+        font-size: 3em;
+      }
+    }
+    .hexagon-container {
+      margin-top: 75px;
+      right: 65px;
+      .hexagon {
+          width: 310px;
+          height: 155px;
+          &:last-child {
+              left: 139px;   
+          }
+      }
+    }
+  }
+}
+
+@media (device-width: 375px) and (device-height: 667px) and (orientation: portrait) {
+  .hero {
+    blockquote {
+      top: 55px;
+    }
+    .hexagon-container {
+      margin-top: 55px;
+    }
+  }
+}
+
+@media (device-width:375px) and (device-height: 667px) and (orientation: landscape),
+(min-device-height: 320px) and (min-device-width: 667px) and (orientation:landscape){
+  .hero {
+        blockquote h1 {
+            font-size: 3em;
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 90px;
+            .hexagon {
+                width: 320px;
+                height: 160px;
+                &:last-child {
+                    left: 142px;
+                }      
+            }
+        } 
+    }
+}
+
+@media (device-width: 414px) and (device-height: 736px) and (orientation: portrait) {
+  .hero .hexagon-container {
+    top: 150px;
+  }
+}
+
+@media (device-width: 414px) and (device-height: 736px) and (orientation: portrait),
+(min-device-width: 410px) and (min-device-height: 730px) and (orientation: portrait) {
+  .hero {
+    blockquote {
+        h1 {
+            font-size: 3.5em;
+        }
+    }
+    .hexagon-container {
+        right: 90px;
+        margin-top: 70px;
+        .hexagon {
+            width: 380px;
+            height: 190px;     
+            &:last-child {
+                left: 170px;   
+            }
+        }
+    }
+  }
+}
+
+@media (device-width:414px) and (device-height: 736px) and (orientation: landscape),
+(min-device-height: 414px) and (min-device-width: 736px) and (orientation:landscape){
+  .hero blockquote h1 {
+    font-size: 3.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    blockquote {
+        h1 {
+            font-size: 5em;
+        }
+    }
+    .hexagon-container {
+        right: 105px;
+        top: 220px;
+        .hexagon {
+            width: 500px;
+            height: 250px;     
+            &:last-child {
+                left: 222px;   
+            }
+            .logo {
+                width: 40px;
+            }
+        }
+    }
+  }  
+}
+
+@media (device-width:768px) and (device-height:1024px) and (orientation: portrait) {
+  .hero {
+    blockquote {
+        h1 {
+            font-size: 5em;
+        }
+    }
+    .hexagon-container {
+        right: 125px;
+        top: 220px;
+        .hexagon {
+            width: 550px;
+            height: 275px;     
+            &:last-child {
+                left: 245px;   
+            }
+            .logo {
+                width: 40px;
+            }
+        }
+    }
+  }
+}
+
+@media (device-width:768px) and (device-height: 1024px) and (orientation: landscape),
+(min-device-height: 768px) and (min-device-width: 1024px) and (orientation:landscape){
+  .hero {
+        blockquote h1 {
+            font-size: 4.5em;
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 130px;
+            margin-top: 0;
+            .hexagon {
+                width: 500px;
+                height: 250px;
+                &:last-child {
+                    left: 222px;
+                }      
+            }
+        } 
+    }
+}
+
+
+// PC
+@media (min-width: 769px) {
+    .hero {
+        blockquote {
+            @include abs-centered(y);
+            padding-left: 20px; 
+            left: 20px!important;
+            h1 {
+                font-size: 3.6em;
+            }
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 100px;
+            margin-top: 0;
+            .hexagon {
+                width: 340px;
+                height: 170px;
+                &:last-child {
+                    left: 152px;
+                }      
+            }
+        } 
+    }
+}
+
+@media (min-width: 850px) {
+    .hero {
+        blockquote h1 {
+            font-size: 3.8em;
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 120px;
+            .hexagon {
+                width: 380px;
+                height: 190px;          
+                &:last-child {
+                    left: 170px;
+                }      
+            }
+        } 
+    }
+}
+
+@media #{$large-and-up} {
+    .hero {
+        .container {
+            position: relative;
+        }
+        blockquote {
+            left: -50px!important;
+            border-left-width: 10px;
+            h1 {
+                font-size: 3.7em;
+            }
+        }
+        .hexagon-container {
+            @include abs-centered(y);
+            right: 0;
+            .hexagon {
+                width: 450px;
+                height: 225px;               
+                &:last-child {
+                    left: 200px;
+                }      
+            }
+        } 
+        .logo {
+            @include abs-centered(x);
+            width: 50px;    
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero blockquote h1 {
+        font-size: 4.5em;
+    }
+}
+
+@media (min-width: 1250px) {
+    .hero blockquote h1 {
+        font-size: 5em;
+    }
+}
+
+@media (min-width: 1440px) {
+    .hero {
+        blockquote {
+            left: -100px;
+            h1 {
+                font-size: 6em;
+            }
+        }
+        .hexagon-container {
+            .hexagon {
+                width: 600px;
+                height: 300px;               
+                &:last-child {
+                    left: 265px;
+                }      
+            }
+        } 
+        .logo {
+            @include abs-centered(x);
+            width: 70px;    
+        }
+    }
+}
