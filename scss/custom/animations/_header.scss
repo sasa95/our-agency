@@ -7,15 +7,15 @@
 		.hexagon {
 			&:first-child {
 				transform:translateY(-500%) rotate(120deg);
-				animation: 1s ease-out 1s 1 forwards first-two-hexagons;
+				animation: .6s ease-out 1s 1 forwards first-two-hexagons;
 			}
 			&:nth-child(2) {
 				transform:translateY(500%) rotate(120deg);
-				animation: 1s ease-out 2s 1 forwards first-two-hexagons;
+				animation: .6s ease-out 1.6s 1 forwards first-two-hexagons;
 			}
 			&:nth-child(3) {
 				transform:translateX(200%) rotate(120deg);
-				animation: 1s ease-out 3s 1 forwards third-hexagon;
+				animation: .6s ease-out 2.2s 1 forwards third-hexagon;
 			}	
 		}
 	}

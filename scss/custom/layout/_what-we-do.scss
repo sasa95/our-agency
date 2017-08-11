@@ -56,7 +56,6 @@
 				@include abs-centered();
 				width: 150px;
 			}
-			>
 		}
 		a.activator {
 			@extend .red-text, .text-lighten-1;
