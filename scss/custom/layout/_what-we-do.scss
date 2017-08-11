@@ -54,8 +54,15 @@
 			text-align: center;
 			>img {
 				@include abs-centered();
-				display: inline-block;
-				width: auto;
+				width: 150px;
+			}
+			>
+		}
+		a.activator {
+			@extend .red-text, .text-lighten-1;
+			cursor: pointer;
+			&:hover {
+				@extend .red-text, .text-darken-2;
 			}
 		}
 	}

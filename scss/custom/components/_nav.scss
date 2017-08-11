@@ -8,4 +8,27 @@
 		z-index: 100;
 		color: #fff;
 	}
+	.background {
+		@extend .light-blue;
+	}
+	#slide-out {
+		.menu-logo {
+			display: block;
+			margin:auto;
+			width: 150px;
+		}
+		.name {
+			font-size: 3em;
+			font-weight: bold;
+			letter-spacing: -3px;
+			margin-bottom: 10px;
+		}
+		.email {
+			font-weight: 300;
+		}
+	}
+	.text-container {
+		// @include abs-centered(y);
+	}
+	
 }

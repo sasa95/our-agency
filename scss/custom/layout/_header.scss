@@ -3,7 +3,7 @@
     position: relative;
     height: 100vh;
     min-height: 100vh;
-    @extend .light-blue, .lighten-1;
+    @extend .light-blue;
     & > .container {
         height: 100%;
     }
@@ -48,7 +48,7 @@
                    left: 118px;
                 }
                 &-inside {
-                    width: 100;
+                    width: 100%;
                     height: 100%;
                     transform:rotate(-60deg);
                     overflow: hidden; 
