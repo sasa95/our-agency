@@ -1,17 +1,25 @@
 #main-nav {
+	.menu-container {
+		max-width: 1024px;
+		margin:auto;
+	}
 	box-shadow: none;
 	background: none;
-	height: 0;
-	#menu-icon {
-		position: absolute;
-		left: 0;
-		z-index: 100;
-		color: #fff;
+	.brand-logo {
+		width: 40px;
+		right: 20px;
+		@media(min-width: 993px) {
+			right: auto;
+			left: 20px;
+		}
+		> img {
+			vertical-align: middle;
+		}
 	}
 	.background {
 		@extend .light-blue;
 	}
-	#slide-out {
+	.side-nav {
 		.menu-logo {
 			display: block;
 			margin:auto;
