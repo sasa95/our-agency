@@ -8,6 +8,7 @@
 	nav {
 		box-shadow: none;
 		background-color: transparent;
+		transition:all .6s;
 	}
 	.brand-logo {
 		width: 40px;
@@ -24,6 +25,8 @@
 		@extend .light-blue;
 	}
 	.side-nav {
+		min-height: 100vh;
+		z-index: 10000;
 		.menu-logo {
 			display: block;
 			margin:auto;
