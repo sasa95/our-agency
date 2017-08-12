@@ -1,7 +1,7 @@
 .hero {
-	.logo {
+	.arrow-down {
 		opacity: 0;
-		animation: 1s ease-out 1 forwards logo-slide-up;
+		animation: 1s ease-in-out 4s 1 forwards arrow-slide-up;
 	}
 	.hexagon-container {
 		.hexagon {
@@ -18,12 +18,6 @@
 				animation: .6s ease-out 2.2s 1 forwards third-hexagon;
 			}	
 		}
-	}
-}
-
-@keyframes logo-slide-up {
-	100% {
-		opacity: 1;
 	}
 }
 
@@ -58,6 +52,17 @@
 	}
 }
 
-.blink {
-	background: red;
+@keyframes arrow-slide-up {
+	0% {
+		transform:translateY(-10px);
+	}
+
+	50% {
+		opacity: 0.6;
+	}
+
+	100% {
+		opacity: 1;
+		transform:translateY(0px);
+	}
 }

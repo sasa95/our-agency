@@ -25,7 +25,8 @@
                 left: 117px;
             }
         }
-        .logo {
+        .arrow-down {
+            bottom: 10px;
             left: 35px!important;
             right: auto;
         }
@@ -43,6 +44,9 @@
     .hexagon-container {
       margin-top: 50px;
     }
+    .arrow-down {
+        bottom: 10px;
+    }
   }
 }
 
@@ -53,7 +57,7 @@
     }
 }
 
-@media (min-device-width:360px) and (min-device-height:530px) and (max-device-height:390px) and (orientation: portrait) {
+@media (min-device-width:360px) and (min-device-height:530px) and (max-device-height:540px) and (orientation: portrait) {
   .hero .hexagon-container {
     top: 200px;
   }
@@ -112,12 +116,6 @@
     }
 }
 
-@media (device-width: 414px) and (device-height: 736px) and (orientation: portrait) {
-  .hero .hexagon-container {
-    top: 150px;
-  }
-}
-
 @media (device-width: 414px) and (device-height: 736px) and (orientation: portrait),
 (min-device-width: 410px) and (min-device-height: 730px) and (orientation: portrait) {
   .hero {
@@ -127,8 +125,8 @@
         }
     }
     .hexagon-container {
+        top: 150px;
         right: 90px;
-        margin-top: 70px;
         .hexagon {
             width: 380px;
             height: 190px;     
@@ -154,6 +152,9 @@
             font-size: 5em;
         }
     }
+    .arrow-down {
+        width: 25px;
+    }
     .hexagon-container {
         right: 105px;
         top: 220px;
@@ -162,9 +163,6 @@
             height: 250px;     
             &:last-child {
                 left: 222px;   
-            }
-            .logo {
-                width: 40px;
             }
         }
     }
@@ -180,15 +178,12 @@
     }
     .hexagon-container {
         right: 125px;
-        top: 220px;
+        top: 250px;
         .hexagon {
             width: 550px;
             height: 275px;     
             &:last-child {
                 left: 245px;   
-            }
-            .logo {
-                width: 40px;
             }
         }
     }
@@ -285,9 +280,9 @@
                 }      
             }
         } 
-        .logo {
+        .arrow-down {
             @include abs-centered(x);
-            width: 50px;    
+            width: 30px;    
         }
     }
 }
@@ -321,9 +316,9 @@
                 }      
             }
         } 
-        .logo {
+        .arrow-down {
             @include abs-centered(x);
-            width: 70px;    
+            width: 35px;    
         }
     }
 }
