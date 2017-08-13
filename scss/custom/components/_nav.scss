@@ -48,6 +48,9 @@
 	.side-nav {
 		min-height: 100vh;
 		z-index: 10000;
+		@media(max-width: 400px){
+			width: 200px;
+		}
 		.menu-logo {
 			display: block;
 			margin:auto;
@@ -61,6 +64,19 @@
 		}
 		.email {
 			font-weight: 300;
+		}
+		> li:first-child {
+			height: 200px;
+			 > .user-view {
+			 	height: 100%;
+			 	.text-container {
+			 		position: relative;
+			 		bottom: 10px;
+			 	}	
+			 	.menu-logo {
+			 		width: 100px;
+			 	}
+			 }
 		}
 	}
 }
