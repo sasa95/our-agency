@@ -83,6 +83,9 @@
     	position: absolute;
     	top: 0;
     	right: 10px;
+    	&:hover {
+    		cursor: pointer;
+    	}
     }
 }
 
