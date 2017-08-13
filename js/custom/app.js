@@ -26,6 +26,9 @@ var lastScrollTop = 0;
 	   }
     lastScrollTop = st;
     }
-
   });
+
+$('#close-nav').on('click', function(event) {
+	$('.button-collapse').sideNav('hide');
+});
 
