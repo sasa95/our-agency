@@ -5,6 +5,24 @@
 	}
 	box-shadow: none;
 	background: none;
+	.navbar-fixed {
+		nav {
+			position: static;
+			&.transparent-nav {
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+		.nav--fixed {
+	        position: fixed;
+	        background-color:#03A9F4; 
+	        transform:translateY(0);
+	        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        }
+        .nav--gone {
+          transform:translateY(-500px);
+        }
+	}
 	nav {
 		box-shadow: none;
 		background-color: transparent;
@@ -17,6 +35,9 @@
 			right: auto;
 			left: 20px;
 		}
+		&.no-brand-logo {
+          display: none;
+        }
 		> img {
 			vertical-align: middle;
 		}
@@ -42,8 +63,8 @@
 			font-weight: 300;
 		}
 	}
-	.text-container {
-		// @include abs-centered(y);
-	}
-	
+}
+
+#sidenav-overlay {
+	z-index: 100;
 }
