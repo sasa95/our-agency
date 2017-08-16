@@ -1,56 +1,213 @@
-@media (orientation:landscape){
+@media (min-width: 540px) and (max-width: 749px) and (min-height: 580px) {
+    .hero {
+        blockquote h1 {
+            font-size: 3em;
+        }
+        .hexagon-container {
+            right: 70px; 
+            .hexagon {
+                width: 340px;
+                height: 170px;
+                &:last-child {
+                    left: 152px;   
+                }
+                &-image {
+                    font-size: 1.8em;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 750px) and (min-height: 600px) {
+    .hero {
+        blockquote h1 {
+            font-size: 4em;
+        }
+        .hexagon-container {
+            right: 70px; 
+            .hexagon {
+                width: 380px;
+                height: 190px;
+                &:last-child {
+                    left: 167px;   
+                }
+                &-image {
+                    font-size: 1.8em;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 993px) {
     .hero {
         > .container {
             flex-direction:row;
         }
+        .hexagon-container {
+            right: 0;
+        }
     }
 }
 
-// S3
-@media (min-width: 360px) and (orientation:portrait) {
+@media (min-width: 993px) and (min-height: 450px) {
     .hero {
         blockquote {
-            padding-left: 13px;
+            position: relative;
+            left: -40px;
             h1 {
-                font-size: 2.7em;
+                font-size: 3.3em;
             }
         }
         .hexagon-container {
-            right: 65px; 
             .hexagon {
-                width: 310px;
-                height: 155px;
+                width: 340px;
+                height: 170px;
                 &:last-child {
-                    left: 139px;   
+                    left: 151px;
                 }
-              }
+                &-image {
+                    font-size: 1.5em;
+                }
+            }
         }
     }
 }
 
-@media (min-width: 530px) and (orientation:landscape) {
+@media (min-width: 1200px) and (min-height: 540px) {
     .hero {
+        blockquote {
+            h1 {
+                font-size: 4em;
+            }
+        }
+        .hexagon-container {
+            .hexagon {
+                width: 420px;
+                height: 210px;
+                &:last-child {
+                    left: 185px;
+                }
+            }
+        }
+    }  
+}
+
+@media (min-width: 1440px) and (min-height: 900px) {
+    .hero {
+        blockquote {
+            padding-left: 30px;
+            h1 {
+                font-size: 5em;
+            }
+        }
+        .hexagon-container {
+            .hexagon {
+                width: 540px;
+                height: 270px;
+                &-image {
+                    font-size: 2em;
+                }
+                &:last-child {
+                    left: 238px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) and (min-height: 1200px) {
+    .hero {
+        blockquote {
+            h1 {
+                font-size: 6em;
+            }
+        }
+        .hexagon-container {
+            .hexagon {
+                width: 600px;
+                height: 300px;
+                &-image {
+                    font-size: 2.4em;
+                }
+                &:last-child {
+                    left: 263px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 2560px) and (min-height: 1440px) {
+    .hero {
+        blockquote {
+            h1 {
+                font-size: 8em;
+            }
+        }
+        .hexagon-container {
+            .hexagon {
+                width: 740px;
+                height: 370px;
+                &-image {
+                    font-size: 2.4em;
+                }
+                &:last-child {
+                    left: 324px;
+                }
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////
+
+// iPhone 4
+@media (device-width:320px) and (device-height:480px) and (orientation:portrait) {
+    .hero {
+        blockquote {
+            h1 {
+                font-size: 2em
+            }
+        }
+    }
+}
+
+// iPhone 4,5
+@media (device-width:320px) and (device-height:480px) and (orientation:landscape),
+(device-width: 320px) and (device-height: 568px) and (orientation:landscape) {
+    .hero {
+        > .container {
+            flex-direction:row;
+        }
         blockquote {
             padding-left: 10px;
             h1 {
-                font-size: 2em;
+                font-size: 1.7em
             }
         }
         .hexagon-container {
-            right: 65px; 
             .hexagon {
-                width: 270px;
-                height: 135px;
+                width: 220px;
+                height: 110px;
                 &:last-child {
-                    left: 121px;   
+                    left: 99px;   
                 }
-              }
+                &-image:before {
+                    font-size: 1.4em;
+                }
+            }
         }
     }
 }
 
+// S2, Neo
 @media (min-device-width:533px) and (max-device-width:534px) and (device-height:320px) and (orientation:landscape) {
     .hero {
+        > .container {
+            flex-direction:row;
+        }
         blockquote {
             padding-left: 10px;
             h1 {
@@ -72,8 +229,37 @@
     }
 }
 
-@media (min-width: 640px) and (orientation:landscape) {
+// S2,S3...S7, Nexus 4 - Portrait
+@media (min-device-width: 360px) and (max-device-width: 384px) and (device-height: 640px) and (orientation:portrait) {
     .hero {
+        blockquote {
+            padding-left: 15px;
+            h1 {
+                font-size: 2.7em;
+            }
+        }
+        .hexagon-container {
+            right: 65px; 
+            .hexagon {
+                width: 310px;
+                height: 155px;
+                &-image {
+                    font-size: 1.4em;
+                }
+                &:last-child {
+                    left: 139px;   
+                }
+              }
+        }
+    }
+}
+
+// S2,S3...S7, Nexus 4 - Landscape
+@media (min-device-height: 360px) and (max-device-height:384px) and (device-width: 640px) and (orientation:landscape) {
+    .hero {
+        > .container {
+            flex-direction:row;
+        }
         blockquote {
             padding-left: 10px;
             h1 {
@@ -95,54 +281,7 @@
     }
 }
 
-
-@media (min-width: 410px) and (orientation:portrait) {
-    .hero {
-        blockquote {
-            h1 {
-                font-size: 3em;
-            }
-        }
-        .hexagon-container {
-            right: 75px; 
-            .hexagon {
-                width: 350px;
-                height: 175px;
-                &:last-child {
-                    left: 155px;   
-                }
-              }
-        }
-    }   
-}
-
-// iPhone 4 & iPhone 5
-@media(device-width: 320px) and (device-height: 480px) and (orientation:landscape),
-(device-width: 568px) and (device-height: 320px) and (orientation:landscape){
-    .hero {
-        blockquote {
-            padding-left: 10px;
-            h1 {
-                font-size: 1.7em;
-            }   
-        }
-        .hexagon-container {
-            right: 65px; 
-            .hexagon {
-                width: 220px;
-                height: 110px;
-                &:last-child {
-                    left: 99px;   
-                }
-                &-image:before {
-                    font-size: 1.4em;
-                }
-              }
-        }
-    }
-}
-
-// iPhone 6 
+// iPhone 6,7 Portrait
 @media(device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
     .hero {
         blockquote {
@@ -163,8 +302,12 @@
     }
 }
 
+// iPhone 6,7 Landscape
 @media(device-width: 375px) and (device-height: 667px) and (orientation:landscape) {
     .hero {
+        > .container {
+            flex-direction:row;
+        }
         blockquote {
             padding-left: 10px;
             h1 {
@@ -183,8 +326,45 @@
     }
 }
 
-@media(min-device-width: 730px) and (max-device-width:736px) and (min-device-height: 410px) and (max-device-height:415px) and (orientation:landscape) {
+// Note 1
+@media (device-width:400px) and (device-height:640px) and (orientation: landscape) {
     .hero {
+        > .container {
+            flex-direction:row;
+        }
+    }
+}
+
+// Nexus 5x, 6p - Portrait
+@media (device-width: 412px) and (device-height:732px) and (orientation:portrait) {
+    .hero {
+        blockquote {
+            h1 {
+                font-size: 3em;
+            }
+        }
+        .hexagon-container {
+            right: 75px; 
+            .hexagon {
+                width: 350px;
+                height: 175px;
+                &-image {
+                    font-size: 1.4em;
+                }
+                &:last-child {
+                    left: 155px;   
+                }
+              }
+        }
+    }   
+}
+
+// Nexus 5x, 6p - Landscape
+@media (device-width: 732px) and (device-height:412px) and (orientation:landscape) {
+    .hero {
+        > .container {
+            flex-direction:row;
+        }
         blockquote {
             padding-left: 10px;
             h1 {
@@ -203,20 +383,23 @@
     }
 }
 
-// iPhone 6+
+// iPhone 6+ - Portrait
 @media(device-width: 414px) and (device-height: 736px) and (orientation:portrait) {
     .hero {
         blockquote {
-            padding-left: 13px;
+            padding-left: 15px;
             h1 {
-                font-size: 3.4em;
+                font-size: 3.2em;
             }   
         }
         .hexagon-container {
             right: 80px;
             .hexagon {
                 width: 370px;
-                height: 185px;     
+                height: 185px; 
+                &-image {
+                    font-size: 1.5em;
+                }    
                 &:last-child {
                     left: 164px;   
                 }
@@ -225,8 +408,12 @@
     }
 }
 
+// iPhone 6+/7+ - Landscape
 @media(device-width: 414px) and (device-height: 736px) and (orientation:landscape) {
     .hero {
+        > .container {
+            flex-direction:row;
+        }
         blockquote {
             padding-left: 10px;
             h1 {
@@ -245,34 +432,116 @@
     }   
 }
 
-@media(min-width: 768px) {
+@media (device-width:480px) and (device-height:800px) and (orientation:portrait){
+    .hero {
+        blockquote {
+            h1 {
+                font-size: 3.5em;
+            }
+        }
+        .hexagon-container {
+            right: 70px;
+            .hexagon {
+                width: 360px;
+                height: 180px;
+                &:last-child {
+                    left: 160px;
+                }
+                &-image {
+                    font-size: 1.7em;
+                }
+            }
+        }
+    }
+}
+
+@media (device-width:800px) and (device-height:480px) and (orientation:landscape),
+(device-width:960px) and (device-height:600px) and (orientation:landscape){
     .hero {
         > .container {
-            flex-direction:column;
+            flex-direction:row;
         }
         blockquote {
-            padding-left: 20px;
+            h1 {
+                font-size: 2.7em;
+            }
+        }
+        .hexagon-container {
+            .hexagon {
+                width: 320px;
+                height: 160px;
+                &:last-child {
+                    left: 142px;
+                }
+                &-image {
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }
+}
+
+@media (device-width:600px) and (device-height:960px) and (orientation:portrait) {
+    .hero {
+        blockquote {
+            h1 {
+                font-size: 3.8em;
+            }
+        }
+        .hexagon-container {
+            right: 80px;
+            .hexagon {
+                width: 380px;
+                height: 190px;
+                &:last-child {
+                    left: 169px;
+                }
+                &-image {
+                    font-size: 1.7em;
+                }
+            }
+        }
+    }
+}
+
+@media (device-width: 604px) and (device-height: 966px) and (orientation:portrait) {
+    .hero {
+        blockquote {
+        padding-left: 20px;
             h1 {
                 font-size: 4em;
             }
         }
         .hexagon-container {
-            right: 75px;
+            right: 90px;
             .hexagon {
-                width: 450px;
-                height: 225px;     
+                width: 400px;
+                height: 200px;     
                 &:last-child {
-                    left: 199px;   
+                    left: 177px;   
+                }
+                &-image {
+                    font-size: 1.5em;
                 }
             }
         }
-        .arrow-down {
-            width: 25px;
+    }
+} 
+
+@media (device-width: 966px) and (device-height: 604px) and (orientation:landscape) {
+    .hero {
+        > .container {
+            flex-direction:row;
         }
-    }     
+        .hexagon-container {
+            .hexagon-image {
+                font-size: 1.4em;
+            }
+        }
+    }
 }
 
-@media (min-width: 600px) and (max-width: 601px) and (height: 1024px) and (orientation:portrait) {
+@media (device-width: 600px) and (height: 1024px) and (orientation:portrait) {
     .hero {
         blockquote {
             padding-left: 20px;
@@ -294,168 +563,37 @@
     }
 }
 
-@media (min-width: 604px) and (max-width: 605px) and (height: 966px) and (orientation:portrait) {
-    .hero {
-        blockquote {
-        padding-left: 20px;
-            h1 {
-                font-size: 4em;
-            }
-        }
-        .hexagon-container {
-            right: 90px;
-            .hexagon {
-                width: 400px;
-                height: 200px;     
-                &:last-child {
-                    left: 177px;   
-                }
-                &-image {
-                    font-size: 1em;
-                }
-            }
-        }
-    }
-} 
-
-@media (min-width: 800px) and (max-width: 801px) and (height: 480px) and (orientation:landscape),
-(min-width: 960px) and (max-width: 961px) and (height: 600px) and (orientation:landscape),
-(min-width: 966px) and (max-width: 967px) and (height: 604px) and (orientation:landscape) {
-    .hero {
-        > .container {
-            flex-direction:row;
-                blockquote {
-                padding-left: 20px;
-                h1 {
-                    font-size: 3em;
-                }
-            }
-            .hexagon-container {
-                right: 75px;
-                .hexagon {
-                    width: 320px;
-                    height: 160px;     
-                    &:last-child {
-                        left: 142px;   
-                    }
-                    &-image {
-                        font-size: 1em;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 720px) and (max-width: 721px) and (height: 1280px) and (orientation:portrait) {
-    .hero {
-        blockquote {
-            padding-left: 20px;
-            h1 {
-                font-size: 4.2em;
-            }
-        }
-        
-        .hexagon-container {
-            right: 105px;
-            .hexagon {
-                width: 560px;
-                height: 280px;     
-                &:last-child {
-                    left: 248px;   
-                }
-                &-image {
-                    font-size: 1.5em;
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 800px) and (max-width: 801px) and (height: 1280px) and (orientation:portrait) {
-    .hero {
-        blockquote {
-            padding-left: 20px;
-            h1 {
-                font-size: 4.2em;
-            }
-        }
-        
-        .hexagon-container {
-            right: 105px;
-            .hexagon {
-                width: 560px;
-                height: 280px;     
-                &:last-child {
-                    left: 248px;   
-                }
-            }
-        }
-    }
-}
-
-@media(min-width: 993px) {
+@media (device-width: 1024px) and (height: 600px) and (orientation:ladnscape) {
     .hero {
         > .container {
             flex-direction:row;
         }
-        blockquote {
-            padding-left: 20px;
-            h1 {
-                font-size: 3.4em;
-            }
-        }
-        .hexagon-container {
-            right: 75px;
-            .hexagon {
-                width: 370px;
-                height: 185px;     
-                &:last-child {
-                    left: 163px;   
-                }
-            }
-        }
-    }     
+    }
 }
 
-@media(min-width: 1200px) {
+@media (device-width: 720px) and (device-height: 1280px) and (orientation:portrait) {
     .hero {
         blockquote {
-            h1 {
-                font-size: 4em;
-            }
-        }
-        .hexagon-container {
-            right: 75px;
-            .hexagon {
-                width: 400px;
-                height: 200px;     
-                &:last-child {
-                    left: 177px;   
-                }
-            }
-        }
-    }     
-}
-
-@media(min-width: 1360px) {
-    .hero {
-        blockquote {
+            padding-left: 30px;
             h1 {
                 font-size: 4.5em;
             }
         }
+        
         .hexagon-container {
-            right: 75px;
+            right: 105px;
             .hexagon {
-                width: 440px;
-                height: 220px;     
+                width: 560px;
+                height: 280px;     
                 &:last-child {
-                    left: 194px;   
+                    left: 248px;   
+                }
+                &-image {
+                    font-size: 1.7em;
                 }
             }
         }
-    }     
+    }
 }
 
 @media(device-width:768px) and (device-height:1024px) and (orientation:portrait),
@@ -463,7 +601,7 @@
 (device-width:800px) and (device-height:1280px) and (orientation:portrait) {
     .hero {
         blockquote {
-            padding-left: 20px;
+            padding-left: 30px;
             h1 {
                 font-size: 5em;
             }
@@ -477,65 +615,12 @@
                     left: 245px;   
                 }
                 &-image {
-                    font-size: 1.5em;
+                    font-size: 1.6em;
                 }
             }
         }
     }    
 }
-
-
-@media(device-width:1024px) and (device-height:768px) and (orientation:landscape) {
-    .hero {
-        blockquote {
-            left: -40px;
-            position: relative;
-            h1 {
-                font-size: 4em;
-            }   
-        }
-        .hexagon-container {
-            right: 130px;
-            .hexagon {
-                width: 420px;
-                height: 210px;
-                &:last-child {
-                    left: 185px;
-                }      
-            }
-        } 
-    }
-}
-
-@media(device-width:1024px) and (device-height:1366px) and (orientation:portrait) {
-    .hero {
-        > .container {
-            flex-direction:column;
-        }
-        blockquote {
-            padding-left: 30px;
-            h1 {
-                font-size: 6em;
-            }   
-        }
-        .hexagon-container {
-            right: 130px;
-            .hexagon {
-                width: 660px;
-                height: 330px;
-                &:last-child {
-                    left: 292px;
-                }      
-            }
-        } 
-    }
-}
-
-@media (min-width: 1280px) {
-    .hero .hexagon-container .hexagon-image {
-        font-size: 1.4em;
-    }
-} 
 
 @media(device-width:1024px) and (device-height:1440px) and (orientation:portrait) {
     .hero {
@@ -559,6 +644,33 @@
                 &-image {
                     font-size: 2em;
                 }  
+            }
+        } 
+    }
+}
+
+@media(device-width:1024px) and (device-height:1366px) and (orientation:portrait) {
+    .hero {
+        > .container {
+            flex-direction:column;
+        }
+        blockquote {
+            padding-left: 30px;
+            h1 {
+                font-size: 6em;
+            }   
+        }
+        .hexagon-container {
+            right: 130px;
+            .hexagon {
+                width: 660px;
+                height: 330px;
+                &-image {
+                    font-size: 2em;
+                }
+                &:last-child {
+                    left: 292px;
+                }      
             }
         } 
     }

@@ -72,7 +72,7 @@
                     visibility: visible;
                     &:before {
                         @include abs-centered();
-                        font-size: 2em;
+                        font-size: 1.4em;
                         @extend .light-blue-text;
 
                     }
