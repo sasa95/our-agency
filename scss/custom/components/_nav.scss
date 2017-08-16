@@ -27,6 +27,10 @@
 		box-shadow: none;
 		background-color: transparent;
 		transition:all .6s;
+		ul.hide-on-med-and-down a:hover {
+			background: #fff;
+			@extend .light-blue-text;
+		}
 	}
 	.brand-logo {
 		width: 40px;
