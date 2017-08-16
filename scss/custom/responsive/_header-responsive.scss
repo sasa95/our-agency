@@ -281,6 +281,14 @@
     }
 }
 
+@media (device-width:740px) and (device-height:360px) and (orientation:landscape) {
+    .hero {
+        > .container {
+            flex-direction:row;
+        }
+    }
+}
+
 // iPhone 6,7 Portrait
 @media(device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
     .hero {
