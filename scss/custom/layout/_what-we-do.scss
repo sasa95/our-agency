@@ -1,9 +1,10 @@
 .what-we-do {
+	margin-top: 0px;
 	.row:after {
 		@media #{$large-and-up} {
 			content: "";
 			position: relative;
-			bottom: -99px;
+			bottom: -20px;
 			display: block;
 			margin: 0 auto;
 			border-bottom: 1px dashed color("grey", "lighten-1");
@@ -16,17 +17,22 @@
   		}
   		&:nth-of-type(2) .card:before {
 			@media #{$large-and-up} {
-				@include circle-border(-220px);
+				@include circle-border(-110px);
     		}
   		}
   		&:nth-of-type(2) .card:after {
 			@media #{$large-and-up} {
-				height: 200px;
+				height: 90px;
     		}
   		}
   		&:last-child .card:before {
 			@media #{$medium-and-down} {
-				@include circle-border(-70px);
+				@include circle-border(-110px);
+    		}
+  		}
+  		&:last-child .card:after {
+			@media #{$medium-and-down} {
+				height: 90px;
     		}
   		}
 	}
@@ -45,7 +51,7 @@
   			}
   			@media #{$large-and-up} {
     			@include abs-centered(x);
-    			height: 150px;
+    			height: 70px;
   			}
 		}
 		.card-image {
@@ -58,10 +64,10 @@
 			}
 		}
 		a.activator {
-			@extend .red-text, .text-lighten-1;
+			@extend .light-blue-text;
 			cursor: pointer;
 			&:hover {
-				@extend .red-text, .text-darken-2;
+				@extend .light-blue-text, .text-darken-2;
 			}
 		}
 	}

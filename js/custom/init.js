@@ -1,4 +1,4 @@
-// Initialize collapse button
+// Collapse button
 $(".button-collapse").sideNav({
 	closeOnClick: true,
 	draggable:false,
@@ -12,4 +12,14 @@ $(".button-collapse").sideNav({
 		$('#main-nav .brand-logo').removeClass('no-brand-logo');
 		$('body').removeClass('body--fixed');
 	}
+});
+
+// Tabs
+ $(document).ready(function(){
+    $('ul.tabs').tabs();
+});
+
+// Material Box
+$(document).ready(function(){
+    $('.materialboxed').materialbox();
 });
