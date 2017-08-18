@@ -1,0 +1,24 @@
+.our-team {
+	padding-top: 15px;
+	text-align: center;
+	.team-member- {
+		&img {
+			margin:0 auto;
+			border:5px solid color(light-blue,base);
+			width: 70%;
+			max-width: 220px;
+		}
+		&name {
+			font-size: 2.3em;
+			margin:10px 0;
+		}
+		&job {
+			font-size: 1.4em;
+			margin:5px 0 50px 0;
+		}
+	}
+	.closing-text {
+		font-size: 1.5em;
+	}
+	
+}

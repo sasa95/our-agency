@@ -1,0 +1,15 @@
+.page-footer {
+	&,.footer-copyright {
+		padding: 0;
+		p {
+			margin: 0;
+		}
+	}
+	
+	.social-icons-container {
+		img {
+			margin-right: 10px;
+			width: 30px;
+		}
+	}
+}
