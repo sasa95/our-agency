@@ -82,7 +82,15 @@
     }
     .arrow-down {
         @include abs-centered(x);
-        bottom: 5px;
+        bottom: 8px;
         width: 15px;
+        @media (min-width: 768px) {
+            bottom: 12px;
+            width: 20px;
+        }
+        @media (min-width: 993px) {
+            bottom: 20px;
+            width: 20px;
+        }
     }
 }
