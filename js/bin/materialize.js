@@ -5285,98 +5285,98 @@ if (jQuery) {
           moveToSlide($active_index + 1);
         }, options.transition + options.interval);
 
-        // HammerJS, Swipe navigation
+        // // HammerJS, Swipe navigation
 
-        // Touch Event
-        var panning = false;
-        var swipeLeft = false;
-        var swipeRight = false;
+        // // Touch Event
+        // var panning = false;
+        // var swipeLeft = false;
+        // var swipeRight = false;
 
-        $this.hammer({
-          prevent_default: false
-        }).on('pan', function (e) {
-          if (e.gesture.pointerType === "touch") {
+        // $this.hammer({
+        //   prevent_default: false
+        // }).on('pan', function (e) {
+        //   if (e.gesture.pointerType === "touch") {
 
-            // reset interval
-            clearInterval($interval);
+        //     // reset interval
+        //     clearInterval($interval);
 
-            var direction = e.gesture.direction;
-            var x = e.gesture.deltaX;
-            var velocityX = e.gesture.velocityX;
-            var velocityY = e.gesture.velocityY;
+        //     var direction = e.gesture.direction;
+        //     var x = e.gesture.deltaX;
+        //     var velocityX = e.gesture.velocityX;
+        //     var velocityY = e.gesture.velocityY;
 
-            $curr_slide = $slider.find('.active');
-            if (Math.abs(velocityX) > Math.abs(velocityY)) {
-              $curr_slide.velocity({ translateX: x
-              }, { duration: 50, queue: false, easing: 'easeOutQuad' });
-            }
+        //     $curr_slide = $slider.find('.active');
+        //     if (Math.abs(velocityX) > Math.abs(velocityY)) {
+        //       $curr_slide.velocity({ translateX: x
+        //       }, { duration: 50, queue: false, easing: 'easeOutQuad' });
+        //     }
 
-            // Swipe Left
-            if (direction === 4 && (x > $this.innerWidth() / 2 || velocityX < -0.65)) {
-              swipeRight = true;
-            }
-            // Swipe Right
-            else if (direction === 2 && (x < -1 * $this.innerWidth() / 2 || velocityX > 0.65)) {
-                swipeLeft = true;
-              }
+        //     // Swipe Left
+        //     if (direction === 4 && (x > $this.innerWidth() / 2 || velocityX < -0.65)) {
+        //       swipeRight = true;
+        //     }
+        //     // Swipe Right
+        //     else if (direction === 2 && (x < -1 * $this.innerWidth() / 2 || velocityX > 0.65)) {
+        //         swipeLeft = true;
+        //       }
 
-            // Make Slide Behind active slide visible
-            var next_slide;
-            if (swipeLeft) {
-              next_slide = $curr_slide.next();
-              if (next_slide.length === 0) {
-                next_slide = $slides.first();
-              }
-              next_slide.velocity({ opacity: 1
-              }, { duration: 300, queue: false, easing: 'easeOutQuad' });
-            }
-            if (swipeRight) {
-              next_slide = $curr_slide.prev();
-              if (next_slide.length === 0) {
-                next_slide = $slides.last();
-              }
-              next_slide.velocity({ opacity: 1
-              }, { duration: 300, queue: false, easing: 'easeOutQuad' });
-            }
-          }
-        }).on('panend', function (e) {
-          if (e.gesture.pointerType === "touch") {
+        //     // Make Slide Behind active slide visible
+        //     var next_slide;
+        //     if (swipeLeft) {
+        //       next_slide = $curr_slide.next();
+        //       if (next_slide.length === 0) {
+        //         next_slide = $slides.first();
+        //       }
+        //       next_slide.velocity({ opacity: 1
+        //       }, { duration: 300, queue: false, easing: 'easeOutQuad' });
+        //     }
+        //     if (swipeRight) {
+        //       next_slide = $curr_slide.prev();
+        //       if (next_slide.length === 0) {
+        //         next_slide = $slides.last();
+        //       }
+        //       next_slide.velocity({ opacity: 1
+        //       }, { duration: 300, queue: false, easing: 'easeOutQuad' });
+        //     }
+        //   }
+        // }).on('panend', function (e) {
+        //   if (e.gesture.pointerType === "touch") {
 
-            $curr_slide = $slider.find('.active');
-            panning = false;
-            curr_index = $slider.find('.active').index();
+        //     $curr_slide = $slider.find('.active');
+        //     panning = false;
+        //     curr_index = $slider.find('.active').index();
 
-            if (!swipeRight && !swipeLeft || $slides.length <= 1) {
-              // Return to original spot
-              $curr_slide.velocity({ translateX: 0
-              }, { duration: 300, queue: false, easing: 'easeOutQuad' });
-            } else if (swipeLeft) {
-              moveToSlide(curr_index + 1);
-              $curr_slide.velocity({ translateX: -1 * $this.innerWidth() }, { duration: 300, queue: false, easing: 'easeOutQuad',
-                complete: function () {
-                  $curr_slide.velocity({ opacity: 0, translateX: 0 }, { duration: 0, queue: false });
-                } });
-            } else if (swipeRight) {
-              moveToSlide(curr_index - 1);
-              $curr_slide.velocity({ translateX: $this.innerWidth() }, { duration: 300, queue: false, easing: 'easeOutQuad',
-                complete: function () {
-                  $curr_slide.velocity({ opacity: 0, translateX: 0 }, { duration: 0, queue: false });
-                } });
-            }
-            swipeLeft = false;
-            swipeRight = false;
+        //     if (!swipeRight && !swipeLeft || $slides.length <= 1) {
+        //       // Return to original spot
+        //       $curr_slide.velocity({ translateX: 0
+        //       }, { duration: 300, queue: false, easing: 'easeOutQuad' });
+        //     } else if (swipeLeft) {
+        //       moveToSlide(curr_index + 1);
+        //       $curr_slide.velocity({ translateX: -1 * $this.innerWidth() }, { duration: 300, queue: false, easing: 'easeOutQuad',
+        //         complete: function () {
+        //           $curr_slide.velocity({ opacity: 0, translateX: 0 }, { duration: 0, queue: false });
+        //         } });
+        //     } else if (swipeRight) {
+        //       moveToSlide(curr_index - 1);
+        //       $curr_slide.velocity({ translateX: $this.innerWidth() }, { duration: 300, queue: false, easing: 'easeOutQuad',
+        //         complete: function () {
+        //           $curr_slide.velocity({ opacity: 0, translateX: 0 }, { duration: 0, queue: false });
+        //         } });
+        //     }
+        //     swipeLeft = false;
+        //     swipeRight = false;
 
-            // Restart interval
-            clearInterval($interval);
-            $interval = setInterval(function () {
-              $active_index = $slider.find('.active').index();
-              if ($slides.length == $active_index + 1) $active_index = 0; // loop to start
-              else $active_index += 1;
+        //     // Restart interval
+        //     clearInterval($interval);
+        //     $interval = setInterval(function () {
+        //       $active_index = $slider.find('.active').index();
+        //       if ($slides.length == $active_index + 1) $active_index = 0; // loop to start
+        //       else $active_index += 1;
 
-              moveToSlide($active_index);
-            }, options.transition + options.interval);
-          }
-        });
+        //       moveToSlide($active_index);
+        //     }, options.transition + options.interval);
+        //   }
+        // });
 
         $this.on('sliderPause', function () {
           clearInterval($interval);

@@ -23,3 +23,8 @@ $(".button-collapse").sideNav({
 $(document).ready(function(){
     $('.materialboxed').materialbox();
 });
+
+// Slider
+$(document).ready(function(){
+	$('.slider').slider();
+});
