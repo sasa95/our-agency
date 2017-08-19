@@ -8,9 +8,21 @@
 	}
 	
 	.social-icons-container {
-		img {
+		svg {
 			margin-right: 10px;
 			width: 30px;
+			.st0 {
+				fill:#03A9F4;
+				transition:fill .6s;
+			}
+            .st1 {
+            	fill:#FFFFFF;
+           	}
+           	&:hover {
+           		.st0 {
+           			fill:#0288d1;
+           		}
+           	}
 		}
 	}
 }
