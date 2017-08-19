@@ -1,13 +1,22 @@
 .contact {
 	padding-top: 40px;
-	// padding-bottom: 15px;
 	.contact-form {
 		padding-bottom: 10px;
 		label {
-			color: #fff;
+			color: #fff!important;
 		}
 		input,textarea {
 			border-bottom-color: #fff;
+			&:focus {
+				border-bottom: 1px solid color(light-blue,darken-2)!important;
+				box-shadow: 0 1px 0 0 color(light-blue,darken-2)!important;
+				& + label {
+					color: #fff;
+				}
+			}
+		}
+		button {
+			@extend  .light-blue,.darken-2;
 		}
 	}
 }

@@ -17,6 +17,9 @@
 			height: 270px!important;
 		}
 		.indicators {
+			display: flex;
+			justify-content:center;
+			align-items:center;
 			z-index: 50;
 			li {
 				width: 12px;
@@ -42,6 +45,10 @@
 				    @include abs-centered(y);
 				    text-align: left;
 				}
+			}
+			.client-speach {
+				font-size: 1.2em;
+				font-style: italic;
 			}
 			.client-signiture {
 				padding-right: 15px;

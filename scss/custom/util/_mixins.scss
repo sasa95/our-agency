@@ -18,15 +18,3 @@
 	}
 	
 }
-
-@mixin circle-border($bottom) {
-	content: "";
-	@include abs-centered(x);
-	bottom:$bottom;
-	display: block;
-	border: 1px dashed;
-	border-radius: 50%;
-	border-color: color("grey", "darken-3");
-	width: 20px;
-	height: 20px;
-}
