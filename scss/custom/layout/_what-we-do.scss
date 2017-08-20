@@ -1,6 +1,8 @@
 .what-we-do {
 	margin-top: -20px;
-	padding-bottom: 20px;
+	@media #{$large-and-up} {
+		padding-bottom: 20px;
+	}
 	.row:after {
 		@media #{$large-and-up} {
 			content: "";
@@ -18,12 +20,12 @@
   		}
   		&:nth-of-type(2) .card:after {
 			@media #{$large-and-up} {
-				height: 170px;
+				height: 103px;
     		}
   		}
   		&:last-child .card:after {
 			@media #{$medium-and-down} {
-				height: 170px;
+				height: 70px;
     		}
   		}
 	}

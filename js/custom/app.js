@@ -37,12 +37,13 @@ $(document).on('click', '.our-projects .fixed-action-btn .btn-floating', functio
 	var $card = $(this).closest('.card');
 
 		$card.on('mouseleave', function() {
-			console.log("asdfdsf");
-			$par.closeFAB();
+			setTimeout(function(){
+				$par.closeFAB();
+			},500);
+			
 		});
 
 		$(document).on('scroll', function() {
-			console.log("asdfdsf");
 			$par.closeFAB();
 		});
 });
@@ -53,7 +54,6 @@ $(document).on('click', '.view-image', function(event) {
 });
 
 $(window).on('load resize', function(event) {
-	console.log("Asdfasdf");
 	$arrow = $('.arrow-link');
 	if($(window).width() > 992) {
 		$arrow.addClass('arrow-link-lg').removeClass('arrow-link-sm');
