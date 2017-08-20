@@ -32,9 +32,26 @@ $('#close-nav').on('click', function(event) {
 	$('.button-collapse').sideNav('hide');
 });
 
-$(document).on('click', '.click-test', function(event) {
+$(document).on('click', '.our-projects .fixed-action-btn .btn-floating', function(event) {
+	var $par = $(this).parent();
+	var $card = $(this).closest('.card');
+
+		$card.on('mouseleave', function() {
+			console.log("asdfdsf");
+			$par.closeFAB();
+		});
+
+		$(document).on('scroll', function() {
+			console.log("asdfdsf");
+			$par.closeFAB();
+		});
+
+});
+
+$(document).on('click', '.view-image', function(event) {
     event.preventDefault();
-    $(this).siblings('.material-placeholder').find('.materialboxed').click();
+    $(this).closest('.card-image').find('.materialboxed').click();
+    $(this).closest('.fixed-action-btn').closeFAB();
 });
 
 $(document).ready(function(){

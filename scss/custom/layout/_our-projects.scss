@@ -15,14 +15,25 @@
 		max-width: 320px;
 		margin-right: auto;
 		margin-left:auto;
-		.red.btn-floating {
-			@extend  .light-blue,.darken-2;
+		&-content {
+			padding-top: 18px;
+			padding-bottom: 10px;
 		}
 		&-action > a {
 			@extend .light-blue-text,.text-darken-2;
 			letter-spacing: 1px;
 			&:hover {
 				@extend .light-blue-text,.text-darken-4;
+			}
+		}
+		&-image {
+			position: relative;
+			.fixed-action-btn {
+				position: absolute;
+				bottom: -20px;
+				.btn-floating {
+					@extend .light-blue,.darken-2;
+				}
 			}
 		}
 	}
