@@ -28,3 +28,8 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$('.slider').slider();
 });
+
+// ScrollSpy
+$(document).ready(function(){
+    $('.scrollspy').scrollSpy({activeClass:'inFocus'});
+  });

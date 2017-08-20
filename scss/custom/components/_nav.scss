@@ -31,6 +31,7 @@
 			a {
 				position: relative;
 			}
+			a.inFocus:after,
 			a:after {
 			 	content:" ";
 			    position:absolute;
@@ -42,6 +43,9 @@
 			  	border-bottom: 2px solid #fff;
 			  	opacity: 0;
 			  	transition:all 0.3s;
+			}
+			a.inFocus:after {
+				opacity: 1;
 			}
 			a:hover {
 				background: transparent;
