@@ -32,4 +32,10 @@ $(document).ready(function(){
 // ScrollSpy
 $(document).ready(function(){
     $('.scrollspy').scrollSpy({activeClass:'inFocus'});
-  });
+});
+
+// Tooltip
+$(document).ready(function(){
+	$('.tooltipped').tooltip({delay: 50,position:'right'});
+});
+        

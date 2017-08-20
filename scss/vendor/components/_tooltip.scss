@@ -19,12 +19,12 @@
 }
 
 .backdrop {
+  @extend .light-blue;
   position: absolute;
   opacity: 0;
   height: 7px;
   width: 14px;
   border-radius: 0 0 50% 50%;
-  background-color: #323232;
   z-index: -1;
   transform-origin: 50% 0%;
   visibility: hidden;
