@@ -45,7 +45,6 @@ $(document).on('click', '.our-projects .fixed-action-btn .btn-floating', functio
 			console.log("asdfdsf");
 			$par.closeFAB();
 		});
-
 });
 
 $(document).on('click', '.view-image', function(event) {
@@ -53,8 +52,21 @@ $(document).on('click', '.view-image', function(event) {
     $(this).closest('.card-image').find('.materialboxed').click();
 });
 
+$(window).on('load resize', function(event) {
+	console.log("Asdfasdf");
+	$arrow = $('.arrow-link');
+	if($(window).width() > 992) {
+		$arrow.addClass('arrow-link-lg').removeClass('arrow-link-sm');
+		console.log("vece");
+	}
+	else {
+		$arrow.addClass('arrow-link-sm').removeClass('arrow-link-lg');
+		console.log("manje");
+	}
+});
+
 $(document).ready(function(){
-	$('#mobile-demo a').on('click',function (e) {
+	$('#mobile-demo a,.arrow-link-sm').on('click',function (e) {
 	    e.preventDefault();
 
 	    var target = this.hash;
@@ -66,13 +78,13 @@ $(document).ready(function(){
 	        window.location.hash = target;
 	    });
 	});
-	$('.navbar-fixed > nav .hide-on-med-and-down a,.brand-logo').on('click', function(event) {
+	$('.navbar-fixed > nav .hide-on-med-and-down a,.brand-logo,.arrow-link-lg').on('click', function(event) {
 		event.preventDefault();
 		var target = this.hash;
 	    var $target = $(target);
 
 	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top - $('.navbar-fixed > nav').height()
+	        'scrollTop': $target.offset().top - $('#main-nav > div > nav').height()
 	    }, 700, 'swing', function () {
 	        window.location.hash = target;
 	    });
