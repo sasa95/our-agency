@@ -32,9 +32,17 @@
 				position: absolute;
 				bottom: -20px;
 				z-index: 10;
-				.btn-floating {
-					@extend .light-blue,.darken-2;
-				}
+			}
+			.btn-floating {
+				@extend .light-blue,.darken-2;
+			}
+		}
+	}
+
+	#tab-covers {
+		@media (min-width: 993px) {
+			.card-title {
+				font-size: 1.1em;
 			}
 		}
 	}

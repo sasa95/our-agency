@@ -51,17 +51,22 @@ $(document).on('click', '.our-projects .fixed-action-btn .btn-floating', functio
 $(document).on('click', '.view-image', function(event) {
     event.preventDefault();
     $(this).closest('.card-image').find('.materialboxed').click();
+    $(this).closest('.fixed-action-btn').closeFAB();
 });
+
+$(document).on('click', '.view-demo', function(event) {
+    $(this).closest('.fixed-action-btn').closeFAB();
+});
+
+
 
 $(window).on('load resize', function(event) {
 	$arrow = $('.arrow-link');
 	if($(window).width() > 992) {
 		$arrow.addClass('arrow-link-lg').removeClass('arrow-link-sm');
-		console.log("vece");
 	}
 	else {
 		$arrow.addClass('arrow-link-sm').removeClass('arrow-link-lg');
-		console.log("manje");
 	}
 });
 
