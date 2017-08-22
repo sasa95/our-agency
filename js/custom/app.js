@@ -95,3 +95,52 @@ $(document).ready(function(){
 	    });
 	});
 });
+
+
+// Contact form
+
+$(document).on('click', '#toast-container .toast-action', function() {
+    $(this).closest('.toast').fadeOut(function(){
+        $(this).closest('.toast').remove();
+    });
+});
+
+
+var $contactForm = $('#contact-form');
+var $dismiss = '<button class="btn-flat toast-action light-blue-text">Dismiss</button>';
+$contactForm.submit(function(e) {
+	var $name = $('#form-name').val().trim();
+	var $email = $('#form-email').val().trim();
+	var $msg = $('#form-message').val().trim();
+	console.log($msg);
+	if($name == '' || $email == '' || $msg == '' ) {
+		e.preventDefault();
+		Materialize.Toast.removeAll();
+		var $toastContent = $('<span>All fields must be filled out.</span>').add($dismiss);
+		Materialize.toast($toastContent, 5000);	
+	} 
+	else {
+		e.preventDefault();
+		$.ajax({
+			url: '//formspree.io/sasadrmic032@gmail.com',
+			method: 'POST',
+			data: $(this).serialize(),
+			dataType: 'json',
+			beforeSend: function() {
+				Materialize.Toast.removeAll();
+				var $toastContent = $('<span>Sending...</span>').add($dismiss);
+				Materialize.toast($toastContent, 5000);
+			},
+			success: function(data) {
+				Materialize.Toast.removeAll();
+				var $toastContent = $('<span>Sent successfully!</span>').add($dismiss);
+				Materialize.toast($toastContent, 5000);
+			},
+			error: function(err) {
+				Materialize.Toast.removeAll();
+				var $toastContent = $('<span>Ooops... There was an error.</span>').add($dismiss);
+				Materialize.toast($toastContent, 5000);
+			}
+		});
+	}
+});

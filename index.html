@@ -375,23 +375,23 @@
               </div>
               <div class="col s12 m6 offset-m1">
                 <div class="row">
-                  <form class="col s12 contact-form">
+                  <form class="col s12 contact-form" id="contact-form">
                     <div class="row">
                       <div class="input-field col s12">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">Name</label>
+                        <input id="form-name" type="text" class="validate" name="Name">
+                        <label for="form-name">Name</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
+                        <input id="form-email" type="email" class="validate" name="Email">
+                        <label for="form-email">Email</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Message</label>
+                        <textarea id="form-message" class="materialize-textarea" name="Message"></textarea>
+                        <label for="form-message">Message</label>
                       </div>
                     </div>
                     <button class="btn waves-effect waves-light" type="submit" name="action">Submit
@@ -456,5 +456,3 @@
       <script type="text/javascript" src="js/custom/init.js"></script>
       <script type="text/javascript" src="js/custom/typing_animation.js"></script>
       <script type="text/javascript" src="js/custom/app.js"></script>
-
-      
