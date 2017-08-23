@@ -35,6 +35,9 @@
 	}
 
 	#tab-covers {
+		.card {
+			max-width: 280px;
+		}
 		@media (min-width: 993px) {
 			.card-title {
 				font-size: 1.1em;
