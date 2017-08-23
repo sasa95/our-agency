@@ -28,11 +28,6 @@
 		}
 		&-image {
 			position: relative;
-			.fixed-action-btn {
-				position: absolute;
-				bottom: -20px;
-				z-index: 10;
-			}
 			.btn-floating {
 				@extend .light-blue,.darken-2;
 			}

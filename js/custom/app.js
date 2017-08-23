@@ -51,14 +51,7 @@ $(document).on('click', '.our-projects .fixed-action-btn .btn-floating', functio
 $(document).on('click', '.view-image', function(event) {
     event.preventDefault();
     $(this).closest('.card-image').find('.materialboxed').click();
-    $(this).closest('.fixed-action-btn').closeFAB();
 });
-
-$(document).on('click', '.view-demo', function(event) {
-    $(this).closest('.fixed-action-btn').closeFAB();
-});
-
-
 
 $(window).on('load resize', function(event) {
 	$arrow = $('.arrow-link');

@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 // Slider
 $(document).ready(function(){
-	$('.slider').slider();
+	$('.slider').slider({interval:10000});
 });
 
 // ScrollSpy
