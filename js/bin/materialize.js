@@ -2357,8 +2357,8 @@ if (jQuery) {
           newHeight = windowWidth * 0.9 * ratio;
         } else {
           ratio = originalWidth / originalHeight;
-          newWidth = windowHeight * 0.9 * ratio;
-          newHeight = windowHeight * 0.9;
+          newWidth = windowHeight * 0.6 * ratio;
+          newHeight = windowHeight * 0.6;
         }
 
         // Animate image + set z-index
