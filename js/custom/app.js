@@ -137,3 +137,10 @@ $contactForm.submit(function(e) {
 		});
 	}
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+  $('.preloader-background').delay(800).fadeOut('slow');  
+  $('.preloader-wrapper')
+    .delay(800)
+    .fadeOut();
+});
