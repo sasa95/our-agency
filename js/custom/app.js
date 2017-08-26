@@ -32,24 +32,8 @@ $('#close-nav').on('click', function(event) {
 	$('.button-collapse').sideNav('hide');
 });
 
-$(document).on('click', '.our-projects .fixed-action-btn .btn-floating', function(event) {
-	var $par = $(this).parent();
-	var $card = $(this).closest('.card');
-
-		$card.on('mouseleave', function() {
-			setTimeout(function(){
-				$par.closeFAB();
-			},500);
-			
-		});
-
-		$(document).on('scroll', function() {
-			$par.closeFAB();
-		});
-});
-
 $(document).on('click', '.view-image', function(event) {
-    event.preventDefault();
+	$('html').toggleClass('noscroll');
     $(this).closest('.card-image').find('.materialboxed').click();
 });
 
@@ -63,31 +47,31 @@ $(window).on('load resize', function(event) {
 	}
 });
 
-$(document).ready(function(){
-	$('#mobile-demo a,.arrow-link-sm').on('click',function (e) {
-	    e.preventDefault();
+// $(document).ready(function(){
+// 	$('#mobile-demo a,.arrow-link-sm').on('click',function (e) {
+// 	    e.preventDefault();
 
-	    var target = this.hash;
-	    var $target = $(target);
+// 	    var target = this.hash;
+// 	    var $target = $(target);
 
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 700, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
-	$('.navbar-fixed > nav .hide-on-med-and-down a,.brand-logo,.arrow-link-lg').on('click', function(event) {
-		event.preventDefault();
-		var target = this.hash;
-	    var $target = $(target);
+// 	    $('html, body').stop().animate({
+// 	        'scrollTop': $target.offset().top
+// 	    }, 700, 'swing', function () {
+// 	        window.location.hash = target;
+// 	    });
+// 	});
+// 	$('.navbar-fixed > nav .hide-on-med-and-down a,.brand-logo,.arrow-link-lg').on('click', function(event) {
+// 		event.preventDefault();
+// 		var target = this.hash;
+// 	    var $target = $(target);
 
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top - $('#main-nav > div > nav').height()
-	    }, 700, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
-});
+// 	    $('html, body').stop().animate({
+// 	        'scrollTop': $target.offset().top - $('#main-nav > div > nav').height()
+// 	    }, 700, 'swing', function () {
+// 	        window.location.hash = target;
+// 	    });
+// 	});
+// });
 
 
 // Contact form
@@ -115,7 +99,7 @@ $contactForm.submit(function(e) {
 	else {
 		e.preventDefault();
 		$.ajax({
-			url: '//formspree.io/sasadrmic032@gmail.com',
+			url: '//formspree.io/contact@aplusplusagency.com',
 			method: 'POST',
 			data: $(this).serialize(),
 			dataType: 'json',

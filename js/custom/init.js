@@ -30,8 +30,26 @@ $(document).ready(function(){
 });
 
 // ScrollSpy
+function offsetCalculating() {
+	if ($(window).width()>993) {
+		return 64;
+	}
+	else {
+		return 0;
+	}
+}
+
 $(document).ready(function(){
-    $('.scrollspy').scrollSpy({activeClass:'inFocus'});
+	$scrollOffset = offsetCalculating();
+
+	$(window).resize(function() {
+		$scrollOffset = offsetCalculating();
+		$('.scrollspy').scrollSpy({activeClass:'inFocus',scrollOffset:$scrollOffset});	
+	});
+
+	$('.scrollspy').scrollSpy({activeClass:'inFocus',scrollOffset:$scrollOffset});	
+	console.log($scrollOffset);
+    
 });
 
 // Tooltip
